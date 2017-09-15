@@ -1,9 +1,11 @@
 import { Platform } from 'react-native'
 import { Navigation } from 'react-native-navigation'
+import { Provider } from 'react-redux'
 import { registerScreens, registerScreenVisibilityListener } from './screens'
+import store from './store'
 
 
-registerScreens()
+registerScreens({ Provider, store })
 registerScreenVisibilityListener()
 
 const tabs = [{

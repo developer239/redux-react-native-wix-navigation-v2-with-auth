@@ -11,9 +11,11 @@
     "react": "16.0.0-alpha.12",
     "react-native": "0.45.1",
     "react-native-animatable": "^1.1.0",
-    "react-native-navigation": "latest"
+    "react-native-navigation": "latest",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2"
   },
   "devDependencies": {
-    "mocha": "^3.4.2"
+    "babel-plugin-module-resolver": "^2.7.1"
   }
 }

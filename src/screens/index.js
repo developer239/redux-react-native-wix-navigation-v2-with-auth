@@ -4,9 +4,9 @@ import Left from './Left'
 import Right from './Right'
 
 
-export function registerScreens() {
-    Navigation.registerComponent('example.Left', () => Left)
-    Navigation.registerComponent('example.Right', () => Right)
+export function registerScreens(redux) {
+    Navigation.registerComponent('example.Left', () => Left, redux.store, redux.Provider)
+    Navigation.registerComponent('example.Right', () => Right, redux.store, redux.Provider)
 }
 
 export function registerScreenVisibilityListener() {
