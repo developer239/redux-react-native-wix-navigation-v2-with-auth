@@ -1,10 +1,10 @@
 export const initialState = {
-    value: 'initial value',
+  value: 'initial value',
 }
 
 export default (state = initialState) => {
-    switch (false) {
-        default :
-            return state
-    }
+  switch (false) {
+    default :
+      return state
+  }
 }

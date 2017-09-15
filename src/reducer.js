@@ -3,7 +3,7 @@ import defaultReducer from 'modules/default/reducer'
 
 
 const rootReducer = combineReducers({
-    default: defaultReducer,
+  default: defaultReducer,
 })
 
 export default rootReducer
