@@ -7,7 +7,9 @@ class NavigationTypes extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>Right</Text>
+                <Text>
+                    Simple screen
+                </Text>
             </View>
         )
     }

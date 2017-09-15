@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import { StyleSheet, View, Text } from 'react-native'
 
 
@@ -6,7 +7,7 @@ class Actions extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>Left</Text>
+                <Text>Store value: {this.props.initialText}</Text>
             </View>
         )
     }
@@ -18,4 +19,8 @@ const styles = StyleSheet.create({
     },
 })
 
-export default Actions
+const mapStateToProps = state => ({
+    initialText: state.default.value
+})
+
+export default connect(mapStateToProps)(Actions)

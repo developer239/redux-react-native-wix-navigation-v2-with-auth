@@ -1,5 +1,5 @@
 export const initialState = {
-    text: 'Default reducer initial value',
+    value: 'initial value',
 }
 
 export default (state = initialState) => {
