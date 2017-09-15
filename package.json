@@ -1,0 +1,19 @@
+{
+  "name": "example",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "watchman watch-del-all && (adb reverse tcp:8081 tcp:8081 || true) && node node_modules/react-native/local-cli/cli.js start --reset-cache",
+    "ios": "react-native run-ios",
+    "android": "react-native run-android"
+  },
+  "dependencies": {
+    "react": "16.0.0-alpha.12",
+    "react-native": "0.45.1",
+    "react-native-animatable": "^1.1.0",
+    "react-native-navigation": "latest"
+  },
+  "devDependencies": {
+    "mocha": "^3.4.2"
+  }
+}
