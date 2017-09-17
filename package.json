@@ -18,7 +18,9 @@
     "redux": "^3.7.2"
   },
   "devDependencies": {
+    "babel-eslint": "^8.0.0",
     "babel-plugin-module-resolver": "^2.7.1",
+    "babel-preset-stage-0": "^6.24.1",
     "eslint": "^4.6.1",
     "eslint-config-airbnb": "^15.1.0",
     "eslint-plugin-import": "^2.7.0",
