@@ -12,10 +12,12 @@ const tabs = [{
   label: 'Left',
   screen: 'example.Left',
   title: 'Left Tab Screen',
+  icon: require('./static/images/one.png'),
 }, {
   label: 'Right',
   screen: 'example.Right',
   title: 'Right Tab Screen',
+  icon: require('./static/images/one.png'),
 }]
 
 // this will start our app
