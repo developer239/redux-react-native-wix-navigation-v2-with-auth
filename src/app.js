@@ -5,6 +5,8 @@ import { registerScreens, registerScreenVisibilityListener } from './screens'
 import store from './store'
 
 
+import navBarIcon from './static/images/one.png'
+
 registerScreens({ Provider, store })
 registerScreenVisibilityListener()
 
@@ -12,12 +14,12 @@ const tabs = [{
   label: 'Left',
   screen: 'example.Left',
   title: 'Left Tab Screen',
-  icon: require('./static/images/one.png'),
+  icon: navBarIcon,
 }, {
   label: 'Right',
   screen: 'example.Right',
   title: 'Right Tab Screen',
-  icon: require('./static/images/one.png'),
+  icon: navBarIcon,
 }]
 
 // this will start our app
