@@ -5,7 +5,7 @@ import { Container, P, H1, Button } from 'components'
 import { incrementCounter, decrementCounter, clearCounter } from 'modules/counter/actions'
 
 
-const CounterScreen = ({ counterValue, dispatchIncrementCounter, dispatchDecrementCounter, dispatchClearCounter }) => (
+const CounterScreen = ({ counterValue, dispatchIncrementCounter, dispatchDecrementCounter, dispatchClearCounter }) => ( // eslint-disable-line
   <Container>
     <H1>Counter Screen</H1>
     <P>Counter Store value: {counterValue}</P>
