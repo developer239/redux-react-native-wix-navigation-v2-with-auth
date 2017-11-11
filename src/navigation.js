@@ -1,8 +1,8 @@
 import { Navigation } from 'react-native-navigation'
+import { THEME } from 'config'
 
-
-import homeIcoSrc from './static/images/home.png'
-import CounterIcoSrc from './static/images/counter.png'
+import homeIcoSrc from 'static/images/home.png'
+import CounterIcoSrc from 'static/images/counter.png'
 
 
 const tabs = [{
@@ -22,18 +22,18 @@ export const startTabBasedApp = () => Navigation.startTabBasedApp({
   animationType: 'fade',
   tabsStyle: {
     tabBarShowLabels: 'hidden',
-    tabBarButtonColor: '#ffffff',
-    tabBarSelectedButtonColor: '#ff8f72',
+    tabBarButtonColor: THEME.textOnPrimary,
     tabBarBackgroundColor: '#000000',
+    navBarButtonColor: '#000000',
+    tabBarSelectedButtonColor: THEME.primary,
   },
   appStyle: {
     orientation: 'portrait',
     forceTitlesDisplay: true,
-    tabBarBackgroundColor: '#ffffff',
-    tabBarButtonColor: '#000000',
-    tabBarSelectedButtonColor: '#ff8f72',
-    navBarButtonColor: '#151515',
-    navBarBackgroundColor: '#ffffff',
     topBarElevationShadowEnabled: false,
+    tabBarButtonColor: '#000000',
+    tabBarBackgroundColor: THEME.textOnPrimary,
+    navBarButtonColor: '#000000',
+    tabBarSelectedButtonColor: THEME.primary,
   },
 })

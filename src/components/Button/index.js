@@ -1,16 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components/native'
+import { THEME } from 'config'
 
 
 const ButtonContainer = styled.TouchableOpacity`
-  background-color: #338a3e;
+  background-color: ${THEME.primary};
   padding: 10px 5px;
   margin-top: 20px;
 `
 
 const ButtonText = styled.Text`
-  color: #FFFFFF;
+  color: ${THEME.textOnPrimary};
   font-weight: 500;
   text-align: center;
 `
