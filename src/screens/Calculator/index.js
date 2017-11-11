@@ -10,13 +10,13 @@ const styles = StyleSheet.create({
   },
 })
 
-const Actions = ({ initialText }) => (
+const CalculatorScreen = ({ initialText }) => (
   <View style={styles.container}>
-    <Text>Store value: {initialText}</Text>
+    <Text>Calculator Store value: {initialText}</Text>
   </View>
 )
 
-Actions.propTypes = {
+CalculatorScreen.propTypes = {
   initialText: PropTypes.string.isRequired,
 }
 
@@ -24,4 +24,4 @@ const mapStateToProps = state => ({
   initialText: state.default.value,
 })
 
-export default connect(mapStateToProps)(Actions)
+export default connect(mapStateToProps)(CalculatorScreen)

@@ -8,12 +8,12 @@ const styles = StyleSheet.create({
   },
 })
 
-const NavigationTypes = () => (
+const HomeScreen = () => (
   <View style={styles.container}>
     <Text>
-      Simple screen
+      Simple Home Screen
     </Text>
   </View>
 )
 
-export default NavigationTypes
+export default HomeScreen
