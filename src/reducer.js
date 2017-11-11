@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux'
-import calculatorReducer from 'modules/calculator/reducer'
+import counterReducer from 'modules/counter/reducer'
 
 
 const rootReducer = combineReducers({
-  calculator: calculatorReducer,
+  counter: counterReducer,
 })
 
 export default rootReducer

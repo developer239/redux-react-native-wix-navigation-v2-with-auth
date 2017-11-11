@@ -2,20 +2,20 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { Container, P, H1, Button } from 'components'
-import { incrementCounter, decrementCounter, clearCounter } from 'modules/calculator/actions'
+import { incrementCounter, decrementCounter, clearCounter } from 'modules/counter/actions'
 
 
-const CalculatorScreen = ({ counterValue, dispatchIncrementCounter, dispatchDecrementCounter, dispatchClearCounter }) => (
+const CounterScreen = ({ counterValue, dispatchIncrementCounter, dispatchDecrementCounter, dispatchClearCounter }) => (
   <Container>
-    <H1>Calculator Screen</H1>
-    <P>Calculator Store value: {counterValue}</P>
+    <H1>Counter Screen</H1>
+    <P>Counter Store value: {counterValue}</P>
     <Button onPress={dispatchIncrementCounter}>Increment Counter</Button>
     <Button onPress={dispatchDecrementCounter}>Decrement Counter</Button>
     <Button onPress={dispatchClearCounter}>Clear Counter Counter</Button>
   </Container>
 )
 
-CalculatorScreen.propTypes = {
+CounterScreen.propTypes = {
   counterValue: PropTypes.number.isRequired,
   dispatchIncrementCounter: PropTypes.func.isRequired,
   dispatchDecrementCounter: PropTypes.func.isRequired,
@@ -23,7 +23,7 @@ CalculatorScreen.propTypes = {
 }
 
 const mapStateToProps = state => ({
-  counterValue: state.calculator.value,
+  counterValue: state.counter.value,
 })
 
 const mapDispatchToProps = {
@@ -32,4 +32,4 @@ const mapDispatchToProps = {
   dispatchClearCounter: clearCounter,
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(CalculatorScreen)
+export default connect(mapStateToProps, mapDispatchToProps)(CounterScreen)

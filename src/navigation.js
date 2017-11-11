@@ -2,7 +2,7 @@ import { Navigation } from 'react-native-navigation'
 
 
 import homeIcoSrc from './static/images/home.png'
-import calculatorIcoSrc from './static/images/calculator.png'
+import CounterIcoSrc from './static/images/counter.png'
 
 
 const tabs = [{
@@ -11,10 +11,10 @@ const tabs = [{
   title: 'Home',
   icon: homeIcoSrc,
 }, {
-  label: 'Redux Calculator',
-  screen: 'app.Calculator',
-  title: 'Redux Calculator',
-  icon: calculatorIcoSrc,
+  label: 'Redux Counter',
+  screen: 'app.Counter',
+  title: 'Redux Counter',
+  icon: CounterIcoSrc,
 }]
 
 export const startTabBasedApp = () => Navigation.startTabBasedApp({

@@ -1,7 +1,7 @@
 import { Navigation } from 'react-native-navigation'
 
 import Home from './Home'
-import Calculator from './Calculator'
+import Counter from './Counter'
 
 
 const registerComponent =
@@ -11,5 +11,5 @@ const registerComponent =
 
 export function registerScreens(redux) {
   registerComponent(redux)('app.Home', Home)
-  registerComponent(redux)('app.Calculator', Calculator)
+  registerComponent(redux)('app.Counter', Counter)
 }
