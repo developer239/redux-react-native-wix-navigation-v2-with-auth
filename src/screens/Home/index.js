@@ -1,19 +1,12 @@
 import React from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import { Container, H1, P } from 'components'
 
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-})
 
 const HomeScreen = () => (
-  <View style={styles.container}>
-    <Text>
-      Simple Home Screen
-    </Text>
-  </View>
+  <Container>
+    <H1>Home Screen</H1>
+    <P>This is an example screen that is not connected to redux-store.</P>
+  </Container>
 )
 
 export default HomeScreen

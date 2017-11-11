@@ -1,5 +1,5 @@
 export const initialState = {
-  value: 'initial value',
+  value: 0,
 }
 
 export default (state = initialState) => {

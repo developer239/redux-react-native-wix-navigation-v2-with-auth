@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux'
-import defaultReducer from 'modules/default/reducer'
+import calculatorReducer from 'modules/calculator/reducer'
 
 
 const rootReducer = combineReducers({
-  default: defaultReducer,
+  calculator: calculatorReducer,
 })
 
 export default rootReducer

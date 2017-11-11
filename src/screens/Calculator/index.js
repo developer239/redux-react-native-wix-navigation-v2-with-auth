@@ -1,27 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { StyleSheet, View, Text } from 'react-native'
+import { Container, P, H1 } from 'components'
 
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-})
 
 const CalculatorScreen = ({ initialText }) => (
-  <View style={styles.container}>
-    <Text>Calculator Store value: {initialText}</Text>
-  </View>
+  <Container>
+    <H1>Calculator Screen</H1>
+    <P>Calculator Store value: {initialText}</P>
+  </Container>
 )
 
 CalculatorScreen.propTypes = {
-  initialText: PropTypes.string.isRequired,
+  initialText: PropTypes.number.isRequired,
 }
 
 const mapStateToProps = state => ({
-  initialText: state.default.value,
+  initialText: state.calculator.value,
 })
 
 export default connect(mapStateToProps)(CalculatorScreen)
