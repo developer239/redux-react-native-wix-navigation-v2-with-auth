@@ -8,7 +8,7 @@ import { incrementCounter, decrementCounter, clearCounter } from 'modules/counte
 const CounterScreen = ({ counterValue, dispatchIncrementCounter, dispatchDecrementCounter, dispatchClearCounter }) => ( // eslint-disable-line
   <Container>
     <H1>Counter Screen</H1>
-    <P>Counter Store value: {counterValue}</P>
+    <P>Counter store value: {counterValue}</P>
     <Button onPress={dispatchIncrementCounter}>Increment Counter</Button>
     <Button onPress={dispatchDecrementCounter}>Decrement Counter</Button>
     <Button onPress={dispatchClearCounter}>Clear Counter Counter</Button>
