@@ -5,6 +5,11 @@ import { Container, H1, P, Button } from 'components'
 import { compose, withState, withHandlers, lifecycle } from 'recompose'
 
 
+export const NESTED_SCREEN_B = {
+  screen: 'app.NestedScreenB',
+  title: 'Nested Screen B',
+}
+
 const NestedScreenB = ({ navigator, isAlertButton, showAlertButton, hideAlertButton }) => {
   const handlePopToRoot = () => navigator.popToRoot()
 

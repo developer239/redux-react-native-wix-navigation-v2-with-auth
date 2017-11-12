@@ -1,5 +1,7 @@
 import { Navigation } from 'react-native-navigation'
 import { THEME } from 'config'
+import { HOME_SCREEN } from 'screens/Home/index'
+import { COUNTER_SCREEN } from 'screens/Counter/index'
 
 import homeIcoSrc from 'static/images/home.png'
 import CounterIcoSrc from 'static/images/counter.png'
@@ -7,14 +9,12 @@ import CounterIcoSrc from 'static/images/counter.png'
 
 const tabs = [{
   label: 'Home',
-  screen: 'app.Home',
-  title: 'Home',
   icon: homeIcoSrc,
+  ...HOME_SCREEN,
 }, {
   label: 'Redux Counter',
-  screen: 'app.Counter',
-  title: 'Redux Counter',
   icon: CounterIcoSrc,
+  ...COUNTER_SCREEN,
 }]
 
 export const startTabBasedApp = () => Navigation.startTabBasedApp({

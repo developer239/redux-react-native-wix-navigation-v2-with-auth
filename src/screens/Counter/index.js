@@ -5,6 +5,11 @@ import { Container, P, H1, Button } from 'components'
 import { incrementCounter, decrementCounter, clearCounter } from 'modules/counter/actions'
 
 
+export const COUNTER_SCREEN = {
+  screen: 'app.Counter',
+  title: 'Redux Counter',
+}
+
 const CounterScreen = ({ counterValue, dispatchIncrementCounter, dispatchDecrementCounter, dispatchClearCounter }) => ( // eslint-disable-line
   <Container>
     <H1>Counter Screen</H1>
