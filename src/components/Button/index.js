@@ -7,7 +7,7 @@ import { THEME } from 'config'
 const ButtonContainer = styled.TouchableOpacity`
   background-color: ${THEME.primary};
   padding: 10px 5px;
-  margin-top: 20px;
+  margin: 10px 0;
 `
 
 const ButtonText = styled.Text`

@@ -4,6 +4,7 @@
 * [Redux](http://redux.js.org/)
 * [Wix Navigation](https://github.com/wix/react-native-navigation) (this is the best native navigation that javascript has to offer)
 * [Styled Components](https://github.com/styled-components/styled-components)
+* [Recompose](https://github.com/acdlite/recompose)
 
 #### Code Quality Tools
 
