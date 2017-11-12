@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { Container, P, H1, Button } from 'components'
 import { incrementCounter, decrementCounter, clearCounter } from 'modules/counter/actions'
+import { selectCounterValue } from 'modules/counter/selectors'
 
 
 export const COUNTER_SCREEN = {
@@ -33,7 +34,7 @@ CounterScreen.propTypes = {
 }
 
 const mapStateToProps = state => ({
-  counterValue: state.counter.value,
+  counterValue: selectCounterValue(state),
 })
 
 const mapDispatchToProps = {
