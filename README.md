@@ -22,22 +22,12 @@ I intentionally did not include any testing framework so that I would reduce unn
 
 #### Commands
 
-I recommend using yarn for installing project dependencies.
-```bash
-yarn install
-```
+I recommend using yarn for installing project dependencies: `yarn install`
 
-This is the same for every `react-native` project.
-```bash
-yarn start
-```
+This is the same for every `react-native` project: `yarn start`
 
-Yarn also lets you call commands from `package.json` more easily. This command starts build for IOS.
-```bash
-yarn ios
-```
+Yarn also lets you call commands from `package.json` more easily. This command starts build for IOS: `yarn ios`
 
-This command builds the application on android device.
-```bash
-yarn android
-```
+This command builds the application on android device: `yarn android`
+
+Automatically link react-native libraries: `yarn react-native-link`
