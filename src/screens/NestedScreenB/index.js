@@ -10,66 +10,65 @@ export const NESTED_SCREEN_B = {
   title: 'Nested Screen B',
 }
 
-const NestedScreenB = ({ navigator, isAlertButton, showAlertButton, hideAlertButton }) => {
-  const handlePopToRoot = () => navigator.popToRoot()
-
-  const handleHideAlertButton = () => {
-    navigator.setButtons({
-      rightButtons: [],
-      animated: true,
-    })
-    hideAlertButton()
-  }
-
-  const handleShowAlertButton = () => {
-    navigator.setButtons({
-      rightButtons: [
-        {
-          title: 'Alert',
-          id: 'nestedScreenBAlertButton',
-        },
-      ],
-      animated: true,
-    })
-    showAlertButton()
-  }
-
-  return (
-    <Container>
-      <H1>Screen B</H1>
-      <P>
-        This is the end of the road. You can press the top left button to get to the previous
-        screen.
-      </P>
-      <P> On IOS you can also swipe from left to right in order close this screen.</P>
-      <P>If you want to go directly to the home screen then press the button bellow.</P>
-      <Button onPress={handlePopToRoot}>Pop</Button>
-      <P>
-        You can do some cool magic with Wix navigation. You can for example dynamically set
-        navigation buttons.
-      </P>
-      {isAlertButton ?
-        <Button onPress={handleHideAlertButton}>HIDE Top Right Button</Button> :
-        <Button onPress={handleShowAlertButton}>SHOW Top Right Button</Button>
-      }
-    </Container>
-  )
-}
+const NestedScreenB = ({
+  handlePopToRoot,
+  isAlertButton,
+  handleShowAlertButton,
+  handleHideAlertButton,
+}) => (
+  <Container>
+    <H1>Screen B</H1>
+    <P>
+      This is the end of the road. You can press the top left button to get to the previous
+      screen.
+    </P>
+    <P> On IOS you can also swipe from left to right in order close this screen.</P>
+    <P>If you want to go directly to the home screen then press the button bellow.</P>
+    <Button onPress={handlePopToRoot}>Pop</Button>
+    <P>
+      You can do some cool magic with Wix navigation. You can for example dynamically set
+      navigation buttons.
+    </P>
+    {isAlertButton ?
+      <Button onPress={handleHideAlertButton}>HIDE Top Right Button</Button> :
+      <Button onPress={handleShowAlertButton}>SHOW Top Right Button</Button>
+    }
+  </Container>
+)
 
 NestedScreenB.propTypes = {
-  navigator: PropTypes.shape({
+  navigator: PropTypes.shape({ // eslint-disable-line
     popToRoot: PropTypes.func,
   }).isRequired,
   isAlertButton: PropTypes.bool.isRequired,
-  showAlertButton: PropTypes.func.isRequired,
-  hideAlertButton: PropTypes.func.isRequired,
+  handleShowAlertButton: PropTypes.func.isRequired,
+  handleHideAlertButton: PropTypes.func.isRequired,
+  handlePopToRoot: PropTypes.func.isRequired,
 }
 
 const enhance = compose(
   withState('isAlertButton', 'setIsAlertButton', false),
   withHandlers({
-    showAlertButton: ({ setIsAlertButton }) => () => setIsAlertButton(true),
-    hideAlertButton: ({ setIsAlertButton }) => () => setIsAlertButton(false),
+    handleShowAlertButton: ({ setIsAlertButton, navigator }) => () => {
+      navigator.setButtons({
+        rightButtons: [
+          {
+            title: 'Alert',
+            id: 'nestedScreenBAlertButton',
+          },
+        ],
+        animated: true,
+      })
+      setIsAlertButton(true)
+    },
+    handleHideAlertButton: ({ setIsAlertButton, navigator }) => () => {
+      navigator.setButtons({
+        rightButtons: [],
+        animated: true,
+      })
+      setIsAlertButton(false)
+    },
+    handlePopToRoot: ({ navigator }) => () => navigator.popToRoot(),
   }),
   lifecycle({
     componentDidMount() {

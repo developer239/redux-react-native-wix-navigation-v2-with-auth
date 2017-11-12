@@ -10,7 +10,12 @@ export const COUNTER_SCREEN = {
   title: 'Redux Counter',
 }
 
-const CounterScreen = ({ counterValue, dispatchIncrementCounter, dispatchDecrementCounter, dispatchClearCounter }) => ( // eslint-disable-line
+const CounterScreen = ({
+  counterValue,
+  dispatchIncrementCounter,
+  dispatchDecrementCounter,
+  dispatchClearCounter,
+}) => (
   <Container>
     <H1>Counter Screen</H1>
     <P>Counter store value: {counterValue}</P>
