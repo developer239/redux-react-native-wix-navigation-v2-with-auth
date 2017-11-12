@@ -1,10 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Container, H1, P, Button, Br } from 'components'
+import { Container, H1, P, Button } from 'components'
 
 
 const HomeScreen = ({ navigator }) => {
-
   const handleOpenScreenA = () => navigator.push({
     screen: 'app.NestedScreenA',
     title: 'Nested Screen A',

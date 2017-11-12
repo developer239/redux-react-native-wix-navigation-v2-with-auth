@@ -1,10 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Container, H1, P, Br, Button } from 'components'
+import { Container, H1, P, Button } from 'components'
 
 
-const HomeScreen = ({ navigator }) => {
-
+const NestedScreenA = ({ navigator }) => {
   const handleOpenScreenB = () => navigator.push({
     screen: 'app.NestedScreenB',
     title: 'Nested Screen B',
@@ -23,10 +22,10 @@ const HomeScreen = ({ navigator }) => {
   )
 }
 
-HomeScreen.propTypes = {
+NestedScreenA.propTypes = {
   navigator: PropTypes.shape({
     push: PropTypes.func,
   }).isRequired,
 }
 
-export default HomeScreen
+export default NestedScreenA

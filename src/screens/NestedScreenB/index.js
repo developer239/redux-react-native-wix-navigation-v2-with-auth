@@ -5,7 +5,7 @@ import { Container, H1, P, Button } from 'components'
 import { compose, withState, withHandlers, lifecycle } from 'recompose'
 
 
-const HomeScreen = ({ navigator, isAlertButton, showAlertButton, hideAlertButton }) => {
+const NestedScreenB = ({ navigator, isAlertButton, showAlertButton, hideAlertButton }) => {
   const handlePopToRoot = () => navigator.popToRoot()
 
   const handleHideAlertButton = () => {
@@ -51,7 +51,7 @@ const HomeScreen = ({ navigator, isAlertButton, showAlertButton, hideAlertButton
   )
 }
 
-HomeScreen.propTypes = {
+NestedScreenB.propTypes = {
   navigator: PropTypes.shape({
     popToRoot: PropTypes.func,
   }).isRequired,
@@ -77,4 +77,4 @@ const enhance = compose(
   }),
 )
 
-export default enhance(HomeScreen)
+export default enhance(NestedScreenB)
