@@ -12,7 +12,7 @@ export const NESTED_SCREEN_B = {
 
 const NestedScreenB = ({
   handlePopToRoot,
-  isAlertButton,
+  shouldShowAlertButton,
   handleShowAlertButton,
   handleHideAlertButton,
 }) => (
@@ -29,7 +29,7 @@ const NestedScreenB = ({
       You can do some cool magic with Wix navigation. You can for example dynamically set
       navigation buttons.
     </P>
-    {isAlertButton ?
+    {shouldShowAlertButton ?
       <Button onPress={handleHideAlertButton}>HIDE Top Right Button</Button> :
       <Button onPress={handleShowAlertButton}>SHOW Top Right Button</Button>
     }
@@ -40,16 +40,16 @@ NestedScreenB.propTypes = {
   navigator: PropTypes.shape({ // eslint-disable-line
     popToRoot: PropTypes.func,
   }).isRequired,
-  isAlertButton: PropTypes.bool.isRequired,
+  shouldShowAlertButton: PropTypes.bool.isRequired,
   handleShowAlertButton: PropTypes.func.isRequired,
   handleHideAlertButton: PropTypes.func.isRequired,
   handlePopToRoot: PropTypes.func.isRequired,
 }
 
 const enhance = compose(
-  withState('isAlertButton', 'setIsAlertButton', false),
+  withState('shouldShowAlertButton', 'setShouldShowAlertButton', false),
   withHandlers({
-    handleShowAlertButton: ({ setIsAlertButton, navigator }) => () => {
+    handleShowAlertButton: ({ setShouldShowAlertButton, navigator }) => () => {
       navigator.setButtons({
         rightButtons: [
           {
@@ -59,14 +59,14 @@ const enhance = compose(
         ],
         animated: true,
       })
-      setIsAlertButton(true)
+      setShouldShowAlertButton(true)
     },
-    handleHideAlertButton: ({ setIsAlertButton, navigator }) => () => {
+    handleHideAlertButton: ({ setShouldShowAlertButton, navigator }) => () => {
       navigator.setButtons({
         rightButtons: [],
         animated: true,
       })
-      setIsAlertButton(false)
+      setShouldShowAlertButton(false)
     },
     handlePopToRoot: ({ navigator }) => () => navigator.popToRoot(),
   }),
