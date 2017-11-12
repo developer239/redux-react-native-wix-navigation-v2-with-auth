@@ -16,15 +16,15 @@ const ButtonText = styled.Text`
   text-align: center;
 `
 
-const Button = ({ children, onPress }) => (
-  <ButtonContainer onPress={onPress}>
+const ButtonComponent = ({ children, onPress, ...rest }) => (
+  <ButtonContainer onPress={onPress} {...rest}>
     <ButtonText>{children}</ButtonText>
   </ButtonContainer>
 )
 
-Button.propTypes = {
+ButtonComponent.propTypes = {
   children: PropTypes.node.isRequired,
   onPress: PropTypes.func,
 }
 
-export default Button
+export default ButtonComponent
