@@ -1,11 +1,11 @@
 {
   "name": "react-native-redux-wix-navigation-boilerplate",
-  "version": "0.0.1",
-  "private": true,
+  "version": "0.9.0",
   "scripts": {
     "start": "watchman watch-del-all && (adb reverse tcp:8081 tcp:8081 || true) && node node_modules/react-native/local-cli/cli.js start --reset-cache",
-    "ios": "react-native run-ios",
-    "android": "react-native run-android",
+    "ios": "node node_modules/react-native/local-cli/cli.js run-ios",
+    "android": "node node_modules/react-native/local-cli/cli.js run-android",
+    "react-native-link": "node node_modules/react-native/local-cli/cli.js link",
     "lint": "node node_modules/.bin/eslint ./src --fix"
   },
   "dependencies": {
@@ -26,5 +26,15 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.4.0"
-  }
+  },
+  "keywords": [
+    "prop-types",
+    "react",
+    "react-native",
+    "react-native-navigation",
+    "react-redux",
+    "recompose",
+    "redux",
+    "styled-components"
+  ]
 }
