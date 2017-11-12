@@ -9,7 +9,7 @@ export default (state = initialState, action) => {
   const type = action.type
 
   switch (type) {
-    case types.CLEAR_COUNTER:
+    case types.RESET_COUNTER:
       return {
         value: 0,
       }
