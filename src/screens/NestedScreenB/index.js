@@ -33,14 +33,14 @@ const HomeScreen = ({ navigator, isAlertButton, showAlertButton, hideAlertButton
     <Container>
       <H1>Screen B</H1>
       <P>
-        This is the end of the road. You can press the top right button to get to the previous
+        This is the end of the road. You can press the top left button to get to the previous
         screen.
       </P>
       <P> On IOS you can also swipe from left to right in order close this screen.</P>
-      <P>If you want to go directly to the Home screen then press the button bellow.</P>
+      <P>If you want to go directly to the home screen then press the button bellow.</P>
       <Button onPress={handlePopToRoot}>Pop</Button>
       <P>
-        You can do all sorts of magic with Wix navigation. You can for example dynamically set
+        You can do some cool magic with Wix navigation. You can for example dynamically set
         navigation buttons.
       </P>
       {isAlertButton ?
