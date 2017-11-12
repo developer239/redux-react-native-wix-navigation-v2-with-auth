@@ -20,3 +20,25 @@ I also did not include anything except for redux. Most projects will be fine wit
 #### Testing
 
 I intentionally did not include any testing framework so that I would reduce unnecessary boilerplate.
+
+#### Commands
+
+I recommend using yarn for installing project dependencies.
+```bash
+yarn install
+```
+
+This is same for every `react-native` project.
+```bash
+yarn start
+```
+
+Yarn also lets you call commands from `package.json` more easily. This will start build for IOS.
+```bash
+yarn ios
+```
+
+This will build the application on android device.
+```bash
+yarn android
+```
