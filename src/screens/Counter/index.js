@@ -11,7 +11,7 @@ const CounterScreen = ({ counterValue, dispatchIncrementCounter, dispatchDecreme
     <P>Counter store value: {counterValue}</P>
     <Button onPress={dispatchIncrementCounter}>Increment Counter</Button>
     <Button onPress={dispatchDecrementCounter}>Decrement Counter</Button>
-    <Button onPress={dispatchClearCounter}>Clear Counter Counter</Button>
+    <Button onPress={dispatchClearCounter}>Reset Counter</Button>
   </Container>
 )
 
