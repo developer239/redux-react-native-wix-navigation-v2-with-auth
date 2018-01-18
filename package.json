@@ -8,6 +8,7 @@
     "react-native-link": "node node_modules/react-native/local-cli/cli.js link",
     "lint": "node node_modules/.bin/eslint ./src --fix"
   },
+  "license": "MIT",
   "dependencies": {
     "prop-types": "^15.6.0",
     "react": "^16.1.0",
