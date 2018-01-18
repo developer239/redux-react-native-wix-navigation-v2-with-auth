@@ -1,7 +1,6 @@
-![1](https://github.com/developer239/react-native-redux-wix-navigation-boilerplate/blob/master/preview.gif?raw=true)
-
-
 ## React Native Redux Wix Navigation Boilerplate
+
+![1](https://github.com/developer239/react-native-redux-wix-navigation-boilerplate/blob/master/preview.gif?raw=true)
 
 * [Redux](http://redux.js.org/)
 * [Wix Navigation](https://github.com/wix/react-native-navigation) (this is the best native navigation that javascript has to offer)
