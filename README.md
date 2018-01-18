@@ -1,3 +1,6 @@
+![1](https://github.com/developer239/react-native-redux-wix-navigation-boilerplate/blob/master/preview.gif?raw=true)
+
+
 ## React Native Redux Wix Navigation Boilerplate
 
 * [Redux](http://redux.js.org/)
@@ -19,8 +22,6 @@ I included only redux. Most projects will be fine with [redux-thunk](https://git
 #### Testing
 
 I intentionally did not include any testing framework so that I would reduce unnecessary boilerplate.
-
-![1](https://github.com/developer239/react-native-redux-wix-navigation-boilerplate/blob/master/preview.gif?raw=true)
 
 ## Install
 
