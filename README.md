@@ -20,14 +20,40 @@ I included only redux. Most projects will be fine with [redux-thunk](https://git
 
 I intentionally did not include any testing framework so that I would reduce unnecessary boilerplate.
 
-#### Commands
+![1](https://github.com/developer239/react-native-redux-wix-navigation-boilerplate/blob/master/preview.gif?raw=true)
 
-I recommend using yarn for installing project dependencies: `yarn install`
+## Install
 
-This is the same for every `react-native` project: `yarn start`
+You have to have `watchman` installed globally:
 
-Yarn also lets you call commands from `package.json` more easily. This command starts build for IOS: `yarn ios`
+```
+$ brew update
+$ brew install watchman
+```
 
-This command builds the application on android device: `yarn android`
+Then simply install `node_modules`:
 
-Automatically link react-native libraries: `yarn react-native-link`
+```
+$ yarn install
+```
+
+And link native libraries:
+
+```bash
+$ react-native link
+```
+
+
+## Development
+
+Run react native server:
+
+```bash
+$ npm start
+```
+
+Compile mobile application for ios:
+
+```bash
+yarn ios
+```
