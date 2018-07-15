@@ -18,7 +18,9 @@ const ButtonText = styled.Text`
 
 const ButtonComponent = ({ children, onPress, ...rest }) => (
   <ButtonContainer onPress={onPress} {...rest}>
-    <ButtonText>{children}</ButtonText>
+    <ButtonText>
+      {children}
+    </ButtonText>
   </ButtonContainer>
 )
 

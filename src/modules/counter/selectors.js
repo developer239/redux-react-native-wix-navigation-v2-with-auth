@@ -1,1 +1,1 @@
-export const selectCounterValue = (state) => state.counter.value
+export const selectCounterValue = state => state.counter.value

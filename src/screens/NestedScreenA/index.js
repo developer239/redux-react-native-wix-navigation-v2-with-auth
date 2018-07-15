@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Container, H1, P, Button } from 'components'
+import {
+  Container, H1, P, Button,
+} from 'components'
 import { compose, withHandlers } from 'recompose'
 import { NESTED_SCREEN_B } from 'screens/NestedScreenB'
 
@@ -12,13 +14,19 @@ export const NESTED_SCREEN_A = {
 
 const NestedScreenA = ({ handleOpenScreenB }) => (
   <Container>
-    <H1>Screen A</H1>
+    <H1>
+      Screen A
+    </H1>
     <P>
       This is the first nested screen. Button that allows you to go back to previous screen was
       set automatically.
     </P>
-    <P>But you can go even deeper!</P>
-    <Button onPress={handleOpenScreenB}>Open Nested Screen B</Button>
+    <P>
+      But you can go even deeper!
+    </P>
+    <Button onPress={handleOpenScreenB}>
+      Open Nested Screen B
+    </Button>
   </Container>
 )
 

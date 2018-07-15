@@ -6,7 +6,7 @@ export const initialState = {
 }
 
 export default (state = initialState, action) => {
-  const type = action.type
+  const { type } = action
 
   switch (type) {
     case types.RESET_COUNTER:
@@ -21,7 +21,7 @@ export default (state = initialState, action) => {
       return {
         value: state.value + 1,
       }
-    default :
+    default:
       return state
   }
 }

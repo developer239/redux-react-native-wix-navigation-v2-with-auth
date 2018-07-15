@@ -1,7 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { Container, P, H1, Button } from 'components'
+import {
+  Container, P, H1, Button,
+} from 'components'
 import { incrementCounter, decrementCounter, clearCounter } from 'modules/counter/actions'
 import { selectCounterValue } from 'modules/counter/selectors'
 
@@ -18,11 +20,22 @@ const CounterScreen = ({
   dispatchClearCounter,
 }) => (
   <Container>
-    <H1>Counter Screen</H1>
-    <P>Counter store value: {counterValue}</P>
-    <Button onPress={dispatchIncrementCounter}>Increment Counter</Button>
-    <Button onPress={dispatchDecrementCounter}>Decrement Counter</Button>
-    <Button onPress={dispatchClearCounter}>Reset Counter</Button>
+    <H1>
+      Counter Screen
+    </H1>
+    <P>
+      Counter store value:
+      {counterValue}
+    </P>
+    <Button onPress={dispatchIncrementCounter}>
+      Increment Counter
+    </Button>
+    <Button onPress={dispatchDecrementCounter}>
+      Decrement Counter
+    </Button>
+    <Button onPress={dispatchClearCounter}>
+      Reset Counter
+    </Button>
   </Container>
 )
 
