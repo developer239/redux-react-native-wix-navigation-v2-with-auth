@@ -6,7 +6,8 @@
     "ios": "node node_modules/react-native/local-cli/cli.js run-ios",
     "android": "node node_modules/react-native/local-cli/cli.js run-android",
     "react-native-link": "node node_modules/react-native/local-cli/cli.js link",
-    "lint": "node node_modules/.bin/eslint ./src --fix"
+    "lint": "node node_modules/.bin/eslint ./src",
+    "lint:fix": "node node_modules/.bin/eslint ./src --fix"
   },
   "license": "MIT",
   "dependencies": {
