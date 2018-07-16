@@ -13,7 +13,7 @@ export const COUNTER_SCREEN = {
   title: 'Redux Counter',
 }
 
-const CounterScreen = ({
+export const CounterScreen = ({
   counterValue,
   dispatchIncrementCounter,
   dispatchDecrementCounter,

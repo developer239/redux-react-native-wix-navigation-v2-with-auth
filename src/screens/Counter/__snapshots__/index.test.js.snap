@@ -1,0 +1,228 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter Component renders with all props 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CounterScreen
+    counterValue={0}
+    dispatchClearCounter={[Function]}
+    dispatchDecrementCounter={[Function]}
+    dispatchIncrementCounter={[Function]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <Styled(Component)>
+          Counter Screen
+        </Styled(Component)>,
+        <Styled(Component)>
+          Counter store value:
+          0
+        </Styled(Component)>,
+        <ButtonComponent
+          onPress={[Function]}
+        >
+          Increment Counter
+        </ButtonComponent>,
+        <ButtonComponent
+          onPress={[Function]}
+        >
+          Decrement Counter
+        </ButtonComponent>,
+        <ButtonComponent
+          onPress={[Function]}
+        >
+          Reset Counter
+        </ButtonComponent>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": "Counter Screen",
+        },
+        "ref": null,
+        "rendered": "Counter Screen",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            "Counter store value:",
+            0,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Counter store value:",
+          0,
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": "Increment Counter",
+          "onPress": [Function],
+        },
+        "ref": null,
+        "rendered": "Increment Counter",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": "Decrement Counter",
+          "onPress": [Function],
+        },
+        "ref": null,
+        "rendered": "Decrement Counter",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": "Reset Counter",
+          "onPress": [Function],
+        },
+        "ref": null,
+        "rendered": "Reset Counter",
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <Styled(Component)>
+            Counter Screen
+          </Styled(Component)>,
+          <Styled(Component)>
+            Counter store value:
+            0
+          </Styled(Component)>,
+          <ButtonComponent
+            onPress={[Function]}
+          >
+            Increment Counter
+          </ButtonComponent>,
+          <ButtonComponent
+            onPress={[Function]}
+          >
+            Decrement Counter
+          </ButtonComponent>,
+          <ButtonComponent
+            onPress={[Function]}
+          >
+            Reset Counter
+          </ButtonComponent>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": "Counter Screen",
+          },
+          "ref": null,
+          "rendered": "Counter Screen",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              "Counter store value:",
+              0,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Counter store value:",
+            0,
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": "Increment Counter",
+            "onPress": [Function],
+          },
+          "ref": null,
+          "rendered": "Increment Counter",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": "Decrement Counter",
+            "onPress": [Function],
+          },
+          "ref": null,
+          "rendered": "Decrement Counter",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": "Reset Counter",
+            "onPress": [Function],
+          },
+          "ref": null,
+          "rendered": "Reset Counter",
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
