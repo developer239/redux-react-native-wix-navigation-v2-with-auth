@@ -12,7 +12,7 @@ export const HOME_SCREEN = {
   title: 'Home',
 }
 
-const HomeScreen = ({ handleOpenScreenA }) => (
+export const HomeScreen = ({ handleOpenScreenA }) => (
   <Container>
     <H1>
       Home Screen
@@ -32,8 +32,8 @@ const HomeScreen = ({ handleOpenScreenA }) => (
 HomeScreen.propTypes = {
   navigator: PropTypes.shape({ // eslint-disable-line
     push: PropTypes.func,
-  }).isRequired,
-  handleOpenScreenA: PropTypes.func.isRequired,
+  }),
+  handleOpenScreenA: PropTypes.func,
 }
 
 const enhance = compose(
