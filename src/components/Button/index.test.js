@@ -5,7 +5,7 @@ import { shallow } from 'enzyme'
 import Button from './index'
 
 
-describe('Testing ReassignLocationMenu component', () => {
+describe('Button Component', () => {
   it('renders with all props', () => {
     const wrapper = shallow(
       <Button>
