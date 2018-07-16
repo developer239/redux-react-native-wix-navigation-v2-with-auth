@@ -12,7 +12,7 @@ export const NESTED_SCREEN_A = {
   title: 'Nested Screen A',
 }
 
-const NestedScreenA = ({ handleOpenScreenB }) => (
+export const NestedScreenA = ({ handleOpenScreenB }) => (
   <Container>
     <H1>
       Screen A
@@ -33,8 +33,8 @@ const NestedScreenA = ({ handleOpenScreenB }) => (
 NestedScreenA.propTypes = {
   navigator: PropTypes.shape({ // eslint-disable-line
     push: PropTypes.func,
-  }).isRequired,
-  handleOpenScreenB: PropTypes.func.isRequired,
+  }),
+  handleOpenScreenB: PropTypes.func,
 }
 
 const enhance = compose(
