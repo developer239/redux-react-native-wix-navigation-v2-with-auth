@@ -22,8 +22,6 @@ I only included redux. Most projects will be fine with [redux-thunk](https://git
 
 #### Testing
 
-This setup uses [jest](https://github.com/facebook/jest) and [enzyme](https://github.com/airbnb/enzyme) for testing UI components.
-
 ```
 $ yarn test
 ```
