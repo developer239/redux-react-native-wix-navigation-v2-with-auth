@@ -32,6 +32,8 @@
   "globals": {
     "expect": true,
     "describe": true,
+    "beforeEach": true,
+    "afterEach": true,
     "it": true
   }
 }
