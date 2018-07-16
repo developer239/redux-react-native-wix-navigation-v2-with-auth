@@ -12,7 +12,8 @@
 
 * [eslint](https://github.com/eslint/eslint) 5.1.0
 * [stylelint](https://github.com/stylelint/stylelint) TODO
-* [jest](https://github.com/facebook/jest) TODO
+* [jest](https://github.com/facebook/jest) 23.4.1
+* [enzyme](https://github.com/airbnb/enzyme) 3.3.0
 * [.editorconfig](http://editorconfig.org/)
 
 #### Data Flow
@@ -21,7 +22,11 @@ I only included redux. Most projects will be fine with [redux-thunk](https://git
 
 #### Testing
 
-TODO
+This setup uses [jest](https://github.com/facebook/jest) and [enzyme](https://github.com/airbnb/enzyme) for testing UI components.
+
+```
+$ yarn test
+```
 
 ## Installation
 
