@@ -10,13 +10,6 @@
     "lint:fix": "node node_modules/.bin/eslint ./src --fix",
     "test": "jest"
   },
-  "jest": {
-    "preset": "react-native",
-    "transform": {
-      "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
-    },
-    "setupTestFrameworkScriptFile": "<rootDir>/jest.setup.js"
-  },
   "license": "MIT",
   "dependencies": {
     "react": "^16.4.1",
