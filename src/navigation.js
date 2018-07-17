@@ -23,17 +23,17 @@ export const startTabBasedApp = () => Navigation.startTabBasedApp({
   tabsStyle: {
     tabBarShowLabels: 'hidden',
     tabBarButtonColor: THEME.textOnPrimary,
-    tabBarBackgroundColor: '#000000',
-    navBarButtonColor: '#000000',
+    tabBarBackgroundColor: THEME.black,
+    navBarButtonColor: THEME.black,
     tabBarSelectedButtonColor: THEME.primary,
   },
   appStyle: {
     orientation: 'portrait',
     forceTitlesDisplay: true,
     topBarElevationShadowEnabled: false,
-    tabBarButtonColor: '#000000',
+    tabBarButtonColor: THEME.black,
     tabBarBackgroundColor: THEME.textOnPrimary,
-    navBarButtonColor: '#000000',
+    navBarButtonColor: THEME.black,
     tabBarSelectedButtonColor: THEME.primary,
   },
 })
