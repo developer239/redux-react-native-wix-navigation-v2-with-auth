@@ -40,10 +40,10 @@ export const CounterScreen = ({
 )
 
 CounterScreen.propTypes = {
-  counterValue: PropTypes.number.isRequired,
-  dispatchIncrementCounter: PropTypes.func.isRequired,
-  dispatchDecrementCounter: PropTypes.func.isRequired,
-  dispatchClearCounter: PropTypes.func.isRequired,
+  counterValue: PropTypes.number,
+  dispatchIncrementCounter: PropTypes.func,
+  dispatchDecrementCounter: PropTypes.func,
+  dispatchClearCounter: PropTypes.func,
 }
 
 const mapStateToProps = state => ({

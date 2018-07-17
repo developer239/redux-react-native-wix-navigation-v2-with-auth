@@ -14,7 +14,7 @@ export const NESTED_SCREEN_B = {
   title: 'Nested Screen B',
 }
 
-const NestedScreenB = ({
+export const NestedScreenB = ({
   handlePopToRoot,
   shouldShowAlertButton,
   handleShowAlertButton,
@@ -60,11 +60,11 @@ const NestedScreenB = ({
 NestedScreenB.propTypes = {
   navigator: PropTypes.shape({ // eslint-disable-line
     popToRoot: PropTypes.func,
-  }).isRequired,
-  shouldShowAlertButton: PropTypes.bool.isRequired,
-  handleShowAlertButton: PropTypes.func.isRequired,
-  handleHideAlertButton: PropTypes.func.isRequired,
-  handlePopToRoot: PropTypes.func.isRequired,
+  }),
+  shouldShowAlertButton: PropTypes.bool,
+  handleShowAlertButton: PropTypes.func,
+  handleHideAlertButton: PropTypes.func,
+  handlePopToRoot: PropTypes.func,
 }
 
 const enhance = compose(
