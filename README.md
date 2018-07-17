@@ -58,7 +58,7 @@ $ yarn test
 
 ## Troubleshooting
 
-If you run into any problems try one or more of these pints:
+If you run into any problems try one or more of these points:
 
 * Clean up project in Xcode: `Xcode -> Product -> Clean`
 * Run `./repair.sh` in root folder
