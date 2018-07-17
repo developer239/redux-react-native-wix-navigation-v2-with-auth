@@ -1,3 +1,4 @@
+/* eslint-disable import/no-named-as-default */
 import { Navigation } from 'react-native-navigation'
 
 import Home, { HOME_SCREEN } from './Home'
