@@ -11,7 +11,7 @@
 #### Code Quality Tools
 
 * [eslint](https://github.com/eslint/eslint) 5.1.0
-* [stylelint](https://github.com/stylelint/stylelint) TODO
+* [stylelint](https://github.com/stylelint/stylelint) 9.3.0
 * [jest](https://github.com/facebook/jest) 23.4.1
 * [enzyme](https://github.com/airbnb/enzyme) 3.3.0
 * [.editorconfig](http://editorconfig.org/)
@@ -19,12 +19,6 @@
 #### Data Flow
 
 I only included redux. Most projects will be fine with [redux-thunk](https://github.com/gaearon/redux-thunk) If you are more advanced developer then you probably want to install either [redux-observables](https://github.com/redux-observable/redux-observable) or [redux-sagas](https://github.com/redux-saga/redux-saga). redux-observables are the cool thing to use but working with redux-sagas is much easier.
-
-#### Testing
-
-```
-$ yarn test
-```
 
 ## Installation
 
@@ -47,6 +41,14 @@ Run virtual device:
 
 ```
 $ yarn ios
+```
+
+## Testing
+
+Run jest:
+
+```
+$ yarn test
 ```
 
 ## Preview
