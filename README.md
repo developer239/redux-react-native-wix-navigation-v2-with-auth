@@ -3,6 +3,7 @@
 #### Main Dependencies
 
 * [React](https://github.com/facebook/react) 16.4.1
+* [React Native](https://github.com/facebook/react-native) 0.56.0
 * [Redux](http://redux.js.org) 4.0.0
 * [Styled Components](https://github.com/styled-components/styled-components) 3.3.3
 * [Wix React Native Navigation](https://github.com/wix/react-native-navigation) 1.1.476
