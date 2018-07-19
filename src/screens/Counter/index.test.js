@@ -1,23 +1,14 @@
 import React from 'react'
 import { shallow } from 'enzyme'
+import sinon from 'sinon'
 import { CounterScreen } from './index'
 
 
 describe('Counter Component', () => {
-  let counterValue
-  const dispatchIncrementCounter = () => {
-    counterValue += 1
-  }
-  const dispatchDecrementCounter = () => {
-    counterValue -= 1
-  }
-  const dispatchClearCounter = () => {
-    counterValue = 0
-  }
-
-  beforeEach(() => {
-    counterValue = 0
-  })
+  const counterValue = 0
+  const dispatchIncrementCounter = sinon.fake()
+  const dispatchDecrementCounter = sinon.fake()
+  const dispatchClearCounter = sinon.fake()
 
   it('renders with all props', () => {
     const wrapper = shallow(
@@ -44,13 +35,12 @@ describe('Counter Component', () => {
     const buttons = wrapper.find('ButtonComponent')
 
     buttons.at(0).simulate('press')
-    buttons.at(0).simulate('press')
-    expect(counterValue).toBe(2)
+    expect(dispatchIncrementCounter.callCount).toBe(1)
 
     buttons.at(1).simulate('press')
-    expect(counterValue).toBe(1)
+    expect(dispatchDecrementCounter.callCount).toBe(1)
 
     buttons.at(2).simulate('press')
-    expect(counterValue).toBe(0)
+    expect(dispatchClearCounter.callCount).toBe(1)
   })
 })
