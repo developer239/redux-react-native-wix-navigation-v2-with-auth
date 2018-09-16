@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "react": "16.5.0",
-    "react-native": "0.57.0"
+    "react-native": "0.57.0",
+    "react-native-navigation": "^2.0.2553"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",
