@@ -6,7 +6,8 @@
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
     "ios": "node node_modules/react-native/local-cli/cli.js run-ios",
-    "android": "cd ./android && ./gradlew app:assembleDebug && ./gradlew installDebug"
+    "android:graddle-command": "cd ./android && ./gradlew app:assembleDebug && ./gradlew installDebug",
+    "android": "node node_modules/react-native/local-cli/cli.js run-android"
   },
   "dependencies": {
     "react": "16.5.0",
