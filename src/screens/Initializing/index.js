@@ -5,16 +5,16 @@ import {
   StyleSheet,
   AsyncStorage,
 } from 'react-native'
-import { goToAuth, goHome } from '../../navigation'
+import { goToAuthScreen, goToHomeScreen } from '../../navigation'
 import { USER_KEY } from '../../config'
 
 export default class InitialisingScreen extends React.Component {
   async componentDidMount() {
     const user = await AsyncStorage.getItem(USER_KEY)
     if (user) {
-      goHome()
+      goToHomeScreen()
     } else {
-      goToAuth()
+      goToAuthScreen()
     }
   }
 

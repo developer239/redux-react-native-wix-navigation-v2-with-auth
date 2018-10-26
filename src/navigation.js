@@ -1,39 +1,25 @@
-import { Navigation } from 'react-native-navigation'
 import * as Screens from './screens'
+import { registerScreen, setRoot } from './services/navigation'
 
 export const registerScreens = () => {
-  Navigation.registerComponent('Home', () => Screens.Home)
-  Navigation.registerComponent('Initializing', () => Screens.Initializing)
-  Navigation.registerComponent('SignIn', () => Screens.SignIn)
-  Navigation.registerComponent('Screen2', () => Screens.NestedScreenA)
+  registerScreen('Home', Screens.Home)
+  registerScreen('Initializing', Screens.Initializing)
+  registerScreen('SignIn', Screens.SignIn)
+  registerScreen('Screen2', Screens.NestedScreenA)
 }
 
-export const goToAuth = () => Navigation.setRoot({
-  root: {
-    stack: {
-      id: 'SignIn',
-      children: [
-        {
-          component: {
-            name: 'SignIn',
-          },
-        },
-      ],
-    }
-  }
-});
+export const goToAuthScreen = () => setRoot('stack', 'SignIn', [
+  {
+    component: {
+      name: 'SignIn',
+    },
+  },
+])
 
-export const goHome = () => Navigation.setRoot({
-  root: {
-    stack: {
-      id: 'App',
-      children: [
-        {
-          component: {
-            name: 'Home',
-          }
-        }
-    ],
-    }
-  }
-})
+export const goToHomeScreen = () => setRoot('stack', 'App', [
+  {
+    component: {
+      name: 'Home',
+    },
+  },
+])

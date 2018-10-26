@@ -7,7 +7,7 @@ import {
   AsyncStorage,
 } from 'react-native'
 import { Navigation } from 'react-native-navigation'
-import { goToAuth } from '../../navigation'
+import { goToAuthScreen } from '../../navigation'
 import { USER_KEY } from '../../config'
 
 export default class HomeScreen extends React.Component {
@@ -24,7 +24,7 @@ export default class HomeScreen extends React.Component {
   logout = async () => {
     try {
       await AsyncStorage.removeItem(USER_KEY)
-      goToAuth()
+      goToAuthScreen()
     } catch (err) {
       console.log('error signing out...: ', err)
     }

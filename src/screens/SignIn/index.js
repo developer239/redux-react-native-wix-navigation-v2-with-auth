@@ -6,7 +6,7 @@ import {
   Button,
   AsyncStorage,
 } from 'react-native'
-import { goHome } from '../../navigation'
+import { goToHomeScreen } from '../../navigation'
 import { USER_KEY } from '../../config'
 
 export default class SignInScreen extends React.Component {
@@ -22,7 +22,7 @@ export default class SignInScreen extends React.Component {
       // login with provider
       const user = await AsyncStorage.setItem(USER_KEY, username)
       console.log('user successfully signed in!', user)
-      goHome()
+      goToHomeScreen()
     } catch (err) {
       console.log('error:', err)
     }
