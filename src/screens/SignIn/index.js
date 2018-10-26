@@ -1,10 +1,8 @@
 import React from 'react'
 import {
-  View,
-  TextInput,
-  Button,
   AsyncStorage,
 } from 'react-native'
+import { Container, Button, TextInput, H1 } from '../../components'
 import { goToHomeScreen } from '../../navigation'
 import { USER_KEY } from '../../config'
 
@@ -29,26 +27,22 @@ export default class SignInScreen extends React.Component {
 
   render() {
     return (
-      <View>
+      <Container>
+        <H1>Log In Screen</H1>
         <TextInput
           placeholder="Username"
-          autoCapitalize="none"
-          autoCorrect={false}
-          placeholderTextColor="white"
           onChangeText={val => this.onChangeText('username', val)}
         />
         <TextInput
           placeholder="Password"
-          autoCapitalize="none"
-          secureTextEntry={true}
-          placeholderTextColor="white"
+          secureTextEntry
           onChangeText={val => this.onChangeText('password', val)}
         />
         <Button
-          title="Sign In"
           onPress={this.signIn}
+          title="Sign In"
         />
-      </View>
+      </Container>
     )
   }
 }

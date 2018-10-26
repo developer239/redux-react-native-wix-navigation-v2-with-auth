@@ -1,11 +1,6 @@
 import React from 'react'
-import {
-  View,
-  Text,
-  Button,
-  StyleSheet,
-} from 'react-native'
 import { Navigation } from 'react-native-navigation'
+import { Container, Button, H1 } from '../../components'
 
 export default class NestedScreenA extends React.Component {
   static get options() {
@@ -20,13 +15,13 @@ export default class NestedScreenA extends React.Component {
 
   render() {
     return (
-      <View>
-        <Text>Nested Screen A</Text>
+      <Container>
+        <H1>Nested Screen A</H1>
         <Button
           onPress={() => Navigation.pop(this.props.componentId)}
           title="Go Back"
         />
-      </View>
+      </Container>
     )
   }
 }

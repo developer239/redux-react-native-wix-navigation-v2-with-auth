@@ -1,11 +1,9 @@
 import React from 'react'
 import {
-  View,
-  Text,
-  Button,
   AsyncStorage,
 } from 'react-native'
 import { Navigation } from 'react-native-navigation'
+import { Container, H1, Button } from '../../components'
 import { goToAuthScreen } from '../../navigation'
 import { USER_KEY } from '../../config'
 
@@ -32,11 +30,11 @@ export default class HomeScreen extends React.Component {
   render() {
     console.log('props; ', this.props)
     return (
-      <View>
-        <Text>Hello from Home screen.</Text>
+      <Container>
+        <H1>Home Screen</H1>
         <Button
           onPress={this.logout}
-          title="Sign Out"
+          title="Log Out"
         />
         <Button
           onPress={() => {
@@ -48,7 +46,7 @@ export default class HomeScreen extends React.Component {
           }}
           title="View next screen"
         />
-      </View>
+      </Container>
     )
   }
 }

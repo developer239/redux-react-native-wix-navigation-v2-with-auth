@@ -1,9 +1,8 @@
 import React from 'react'
 import {
-  View,
-  Text,
   AsyncStorage,
 } from 'react-native'
+import { Container, Loader } from '../../components'
 import { goToAuthScreen, goToHomeScreen } from '../../navigation'
 import { USER_KEY } from '../../config'
 
@@ -19,9 +18,9 @@ export default class InitialisingScreen extends React.Component {
 
   render() {
     return (
-      <View>
-        <Text>Loading...</Text>
-      </View>
+      <Container>
+        <Loader />
+      </Container>
     )
   }
 }
