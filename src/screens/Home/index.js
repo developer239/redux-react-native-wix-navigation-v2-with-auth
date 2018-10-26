@@ -3,7 +3,6 @@ import {
   View,
   Text,
   Button,
-  StyleSheet,
   AsyncStorage,
 } from 'react-native'
 import { Navigation } from 'react-native-navigation'
@@ -33,7 +32,7 @@ export default class HomeScreen extends React.Component {
   render() {
     console.log('props; ', this.props)
     return (
-      <View style={styles.container}>
+      <View>
         <Text>Hello from Home screen.</Text>
         <Button
           onPress={this.logout}
@@ -53,11 +52,3 @@ export default class HomeScreen extends React.Component {
     )
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-})

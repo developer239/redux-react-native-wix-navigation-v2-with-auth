@@ -2,7 +2,6 @@ import React from 'react'
 import {
   View,
   Text,
-  StyleSheet,
   AsyncStorage,
 } from 'react-native'
 import { goToAuthScreen, goToHomeScreen } from '../../navigation'
@@ -20,20 +19,9 @@ export default class InitialisingScreen extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Loading...</Text>
+      <View>
+        <Text>Loading...</Text>
       </View>
     )
   }
 }
-
-const styles = StyleSheet.create({
-  welcome: {
-    fontSize: 28,
-  },
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-})
