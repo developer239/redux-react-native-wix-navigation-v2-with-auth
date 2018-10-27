@@ -1,8 +1,3 @@
-import React from 'react'
-import { Button } from 'react-native'
+import { Button } from 'native-base'
 
-const ButtonComponent = props => (
-  <Button {...props} />
-)
-
-export default ButtonComponent
+export default Button
