@@ -3,16 +3,16 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "start": "node node_modules/react-native/local-cli/cli.js start -- --reset-cache",
     "android": "node node_modules/react-native/local-cli/cli.js run-android",
     "ios": "node node_modules/react-native/local-cli/cli.js run-ios",
     "test": "jest"
   },
   "dependencies": {
+    "native-base": "2.7.0",
     "react": "^16.7.0-alpha.0",
     "react-native": "0.56.1",
-    "react-native-navigation": "^2.0.2608",
-    "styled-components": "^4.0.2"
+    "react-native-navigation": "^2.0.2608"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",
