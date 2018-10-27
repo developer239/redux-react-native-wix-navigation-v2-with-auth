@@ -16,7 +16,7 @@ const SignInScreen = () => {
       ])
       goToHomeScreen()
     } else {
-      // display toast and clear form
+      // display toast and clear form this validation should come from server
     }
   }
 
