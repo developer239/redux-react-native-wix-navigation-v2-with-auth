@@ -1,6 +1,7 @@
 import React from 'react'
 import { Navigation } from 'react-native-navigation'
-import { Container, Button, H1 } from '../../components'
+import { Flex, Button } from '../../components'
+import { H1 } from '../../components/Text'
 
 export default class NestedScreenA extends React.Component {
   static get options() {
@@ -15,13 +16,13 @@ export default class NestedScreenA extends React.Component {
 
   render() {
     return (
-      <Container>
+      <Flex>
         <H1>Nested Screen A</H1>
         <Button
           onPress={() => Navigation.pop(this.props.componentId)}
           title="Go Back"
         />
-      </Container>
+      </Flex>
     )
   }
 }

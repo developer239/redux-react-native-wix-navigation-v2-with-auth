@@ -2,7 +2,7 @@ import React from 'react'
 import {
   AsyncStorage,
 } from 'react-native'
-import { Container, Loader } from '../../components'
+import { Flex, Spinner } from '../../components'
 import { goToAuthScreen, goToHomeScreen } from '../../navigation'
 import { USER_KEY } from '../../config'
 
@@ -18,9 +18,9 @@ export default class InitialisingScreen extends React.Component {
 
   render() {
     return (
-      <Container>
-        <Loader />
-      </Container>
+      <Flex center>
+        <Spinner />
+      </Flex>
     )
   }
 }

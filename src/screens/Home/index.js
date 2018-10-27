@@ -3,7 +3,8 @@ import {
   AsyncStorage,
 } from 'react-native'
 import { Navigation } from 'react-native-navigation'
-import { Container, H1, Button } from '../../components'
+import { Button, Flex } from '../../components'
+import { H1 } from '../../components/Text'
 import { goToAuthScreen } from '../../navigation'
 import { USER_KEY } from '../../config'
 
@@ -30,7 +31,7 @@ export default class HomeScreen extends React.Component {
   render() {
     console.log('props; ', this.props)
     return (
-      <Container>
+      <Flex>
         <H1>Home Screen</H1>
         <Button
           onPress={this.logout}
@@ -46,7 +47,7 @@ export default class HomeScreen extends React.Component {
           }}
           title="View next screen"
         />
-      </Container>
+      </Flex>
     )
   }
 }

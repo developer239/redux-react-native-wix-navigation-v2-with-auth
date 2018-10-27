@@ -2,17 +2,13 @@ import React from 'react'
 import {
   AsyncStorage,
 } from 'react-native'
-import { Container, Button, TextInput, H1 } from '../../components'
+import { Flex, Spacing } from '../../components'
+import { H1 } from '../../components/Text'
+import SignInForm from '../../forms/SignIn'
 import { goToHomeScreen } from '../../navigation'
 import { USER_KEY } from '../../config'
 
 export default class SignInScreen extends React.Component {
-  state = {
-    username: '', password: '',
-  }
-  onChangeText = (key, value) => {
-    this.setState({ [key]: value })
-  }
   signIn = async () => {
     const { username } = this.state
     try {
@@ -27,22 +23,12 @@ export default class SignInScreen extends React.Component {
 
   render() {
     return (
-      <Container>
-        <H1>Log In Screen</H1>
-        <TextInput
-          placeholder="Username"
-          onChangeText={val => this.onChangeText('username', val)}
-        />
-        <TextInput
-          placeholder="Password"
-          secureTextEntry
-          onChangeText={val => this.onChangeText('password', val)}
-        />
-        <Button
-          onPress={this.signIn}
-          title="Sign In"
-        />
-      </Container>
+      <Spacing marginHorizontal={20}>
+        <Flex center>
+          <H1>Sign In</H1>
+          <SignInForm />
+        </Flex>
+      </Spacing>
     )
   }
 }
