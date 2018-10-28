@@ -5,8 +5,7 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start -- --reset-cache",
     "android": "node node_modules/react-native/local-cli/cli.js run-android",
-    "ios": "node node_modules/react-native/local-cli/cli.js run-ios",
-    "test": "jest"
+    "ios": "node node_modules/react-native/local-cli/cli.js run-ios"
   },
   "dependencies": {
     "formik": "^1.3.1",
@@ -31,5 +30,22 @@
   },
   "jest": {
     "preset": "react-native"
-  }
+  },
+  "keywords": [
+    "formik",
+    "native-base",
+    "react",
+    "react-native",
+    "react-native-navigation",
+    "wix",
+    "redux",
+    "react-redux",
+    "recompose",
+    "styled-components",
+    "stylelint",
+    "eslint",
+    "styled-is",
+    "yup",
+    "style-lint"
+  ]
 }
