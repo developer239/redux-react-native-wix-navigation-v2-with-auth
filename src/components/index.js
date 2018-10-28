@@ -1,17 +1,15 @@
 import Button from './Button'
-import Flex from './Flex'
+import Container from './Container'
 import Form from './Form'
 import FormItem from './FormItem'
 import Input from './Input'
-import Spacing from './Spacing'
 import Spinner from './Spinner'
 
 export {
   Button,
-  Flex,
+  Container,
   Form,
   FormItem,
   Input,
-  Spacing,
   Spinner,
 }

@@ -4,7 +4,7 @@ import {
 } from 'react-native'
 import { Root, Toast } from 'native-base'
 import wait from '../../services/wait'
-import { Flex, Spacing } from '../../components'
+import { Container } from '../../components'
 import { H1 } from '../../components/Text'
 import SignInForm from '../../forms/SignIn'
 import { goToHomeScreen } from '../../navigation'
@@ -30,12 +30,10 @@ const SignInScreen = () => {
 
   return (
     <Root>
-      <Spacing marginHorizontal={20}>
-        <Flex center>
-          <H1>Sign In</H1>
-          <SignInForm onSubmit={handleSubmit} />
-        </Flex>
-      </Spacing>
+      <Container center marginHorizontal={20}>
+        <H1>Sign In</H1>
+        <SignInForm onSubmit={handleSubmit} />
+      </Container>
     </Root>
   )
 }

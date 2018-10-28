@@ -1,14 +1,14 @@
 import React from 'react'
 import { compose, lifecycle } from 'recompose'
 import { AsyncStorage } from 'react-native'
-import { Flex, Spinner } from '../../components'
+import { Container, Spinner } from '../../components'
 import { goToAuthScreen, goToHomeScreen } from '../../navigation'
 import { USER_KEY } from '../../config'
 
 const InitialisingScreen = () => (
-  <Flex center>
+  <Container center>
     <Spinner />
-  </Flex>
+  </Container>
 )
 
 const enhance = compose(
