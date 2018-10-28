@@ -2,6 +2,8 @@ import React from 'react'
 import {
   AsyncStorage,
 } from 'react-native'
+import { Root, Toast } from 'native-base'
+import wait from '../../services/wait'
 import { Flex, Spacing } from '../../components'
 import { H1 } from '../../components/Text'
 import SignInForm from '../../forms/SignIn'
@@ -9,31 +11,39 @@ import { goToHomeScreen } from '../../navigation'
 import { USER_KEY } from '../../config'
 
 const SignInScreen = () => {
-  const handleSignIn = async ({ username, password }) => {
-    if (password === 'Password1234') {
-      await Promise.all([
-        AsyncStorage.setItem(USER_KEY, username),
-      ])
-      goToHomeScreen()
-    } else {
-      // display toast and clear form this validation should come from server
+  const handleSubmit = async ({ email, password }, { resetForm }) => {
+    // Fake response from server
+    await wait(1000)
+
+    if (password !== 'password') {
+      resetForm()
+      return Toast.show({
+        text: 'Wrong password!',
+        type: 'danger',
+        position: 'top',
+      })
     }
+
+    await AsyncStorage.setItem(USER_KEY, email)
+    goToHomeScreen()
   }
 
   return (
-    <Spacing marginHorizontal={20}>
-      <Flex center>
-        <H1>Sign In</H1>
-        <SignInForm />
-      </Flex>
-    </Spacing>
+    <Root>
+      <Spacing marginHorizontal={20}>
+        <Flex center>
+          <H1>Sign In</H1>
+          <SignInForm onSubmit={handleSubmit} />
+        </Flex>
+      </Spacing>
+    </Root>
   )
 }
 
 SignInScreen.options = () => ({
   topBar: {
     visible: false,
-  }
+  },
 })
 
 export default SignInScreen
