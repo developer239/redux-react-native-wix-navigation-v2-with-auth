@@ -2,10 +2,11 @@ import React from 'react'
 import {
   AsyncStorage,
 } from 'react-native'
-import { Root, Toast } from 'native-base'
+import { Toast } from 'native-base'
 import wait from '../../services/wait'
 import { Container } from '../../components'
 import { H1 } from '../../components/Text'
+import { withNativeBaseRoot } from '../../hocs'
 import SignInForm from '../../forms/SignIn'
 import { goToHomeScreen } from '../../navigation'
 import { USER_KEY } from '../../config'
@@ -29,12 +30,10 @@ const SignInScreen = () => {
   }
 
   return (
-    <Root>
-      <Container center marginHorizontal={20}>
-        <H1>Sign In</H1>
-        <SignInForm onSubmit={handleSubmit} />
-      </Container>
-    </Root>
+    <Container center marginHorizontal={20}>
+      <H1>Sign In</H1>
+      <SignInForm onSubmit={handleSubmit} />
+    </Container>
   )
 }
 
@@ -48,4 +47,4 @@ SignInScreen.options = () => ({
   },
 })
 
-export default SignInScreen
+export default withNativeBaseRoot(SignInScreen)
