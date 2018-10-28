@@ -86,6 +86,7 @@ const enhance = compose(
 
 const EnhancedNestedScreenB = enhance(NestedScreenB)
 
+// TODO: Hoist Non React Statics
 EnhancedNestedScreenB.options = () => ({
   topBar: {
     title: {

@@ -41,10 +41,13 @@ export const SIGN_IN_SCREEN = {
   name: 'app.SignIn',
 }
 
-SignInScreen.options = () => ({
+const EnhancedSignInScreen = withNativeBaseRoot(SignInScreen)
+
+// TODO: Hoist Non React Statics
+EnhancedSignInScreen.options = () => ({
   topBar: {
     visible: false,
   },
 })
 
-export default withNativeBaseRoot(SignInScreen)
+export default EnhancedSignInScreen
