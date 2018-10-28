@@ -29,29 +29,27 @@ const HomeScreen = ({ componentId }) => {
 
   return (
     <Spacing marginHorizontal={20} marginVertical={20}>
-      <Flex>
-        <H1>Home Screen</H1>
-        <StyledText>
-          With React Native Navigation it is easy to make native transitions between
-          screens.
-        </StyledText>
-        <Button
-          onPress={handleOpenNestedScreenAPress}
-          block
-        >
-          Open Nested Screen A
-        </Button>
-        <StyledText>
-          If you refresh the application or if you minimize it and then open it again you will
-          be signed in. Press the sign out button if you want to sign in as a different
-          user.
-        </StyledText>
-        <Button
-          onPress={handleLogOut}
-        >
-          Sign Out
-        </Button>
-      </Flex>
+      <H1>Home Screen</H1>
+      <StyledText>
+        With React Native Navigation it is easy to make native transitions between
+        screens.
+      </StyledText>
+      <Button
+        onPress={handleOpenNestedScreenAPress}
+        block
+      >
+        Open Nested Screen A
+      </Button>
+      <StyledText>
+        If you refresh the application or if you minimize it and then open it again you will
+        be signed in. Press the sign out button if you want to sign in as a different
+        user.
+      </StyledText>
+      <Button
+        onPress={handleLogOut}
+      >
+        Sign Out
+      </Button>
     </Spacing>
   )
 }
