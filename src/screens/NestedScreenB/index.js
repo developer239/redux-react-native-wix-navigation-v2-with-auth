@@ -17,10 +17,15 @@ const NestedScreenB = ({ componentId }) => {
   )
 }
 
+export const NESTED_B_SCREEN = {
+  name: 'app.NestedB',
+  title: 'Nested Screen B',
+}
+
 NestedScreenB.options = () => ({
   topBar: {
     title: {
-      text: 'Nested Screen B',
+      text: NESTED_B_SCREEN.title,
     },
   },
 })

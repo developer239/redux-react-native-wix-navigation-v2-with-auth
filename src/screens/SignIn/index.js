@@ -40,6 +40,10 @@ const SignInScreen = () => {
   )
 }
 
+export const SIGN_IN_SCREEN = {
+  name: 'app.SignIn',
+}
+
 SignInScreen.options = () => ({
   topBar: {
     visible: false,

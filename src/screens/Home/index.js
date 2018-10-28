@@ -4,10 +4,11 @@ import {
 } from 'react-native'
 import { Navigation } from 'react-native-navigation'
 import styled from 'styled-components'
+import { USER_KEY } from '../../config'
+import { NESTED_A_SCREEN } from '../NestedScreenA'
 import { Button, Flex } from '../../components'
 import { H1, Text } from '../../components/Text'
 import { goToAuthScreen } from '../../navigation'
-import { USER_KEY } from '../../config'
 import Spacing from '../../components/Spacing'
 
 const StyledText = styled(Text)`
@@ -22,7 +23,7 @@ const HomeScreen = ({ componentId }) => {
 
   const handleOpenNestedScreenAPress = () => Navigation.push(componentId, {
     component: {
-      name: 'Screen2',
+      name: NESTED_A_SCREEN.name,
     },
   })
 
@@ -55,10 +56,15 @@ const HomeScreen = ({ componentId }) => {
   )
 }
 
+export const HOME_SCREEN = {
+  name: 'app.Home',
+  title: 'Home',
+}
+
 HomeScreen.options = () => ({
   topBar: {
     title: {
-      text: 'Home',
+      text: HOME_SCREEN.title,
     },
   },
 })

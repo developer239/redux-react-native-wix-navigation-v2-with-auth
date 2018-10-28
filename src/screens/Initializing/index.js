@@ -24,4 +24,8 @@ const enhance = compose(
   }),
 )
 
+export const INITIALIZING_SCREEN = {
+  name: 'app.Initializing',
+}
+
 export default enhance(InitialisingScreen)
