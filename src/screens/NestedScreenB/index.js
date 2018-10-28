@@ -3,7 +3,7 @@ import { Navigation } from 'react-native-navigation'
 import { Flex, Button } from '../../components'
 import { H1 } from '../../components/Text'
 
-const NestedScreenA = ({ componentId }) => {
+const NestedScreenB = ({ componentId }) => {
 
   return (
     <Flex>
@@ -17,12 +17,12 @@ const NestedScreenA = ({ componentId }) => {
   )
 }
 
-NestedScreenA.options = () => ({
+NestedScreenB.options = () => ({
   topBar: {
     title: {
-      text: 'Nested Screen A',
+      text: 'Nested Screen B',
     },
   },
 })
 
-export default NestedScreenA
+export default NestedScreenB

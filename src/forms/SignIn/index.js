@@ -61,7 +61,7 @@ const SignInForm = ({ onSubmit }) => (
           <Hint>hint: password</Hint>
         </FormItem>
         <Button disabled={isSubmitting} onPress={handleSubmit} block>
-          <Text>{isSubmitting ? 'loading...' : 'Sign In'}</Text>
+          {isSubmitting ? 'loading...' : 'Sign In'}
         </Button>
       </Form>
     )}

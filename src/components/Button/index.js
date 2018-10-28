@@ -1,3 +1,8 @@
+import React from 'react'
 import { Button } from 'native-base'
+import { Text } from '../Text'
 
-export default Button
+const ButtonComponent = ({ children, ...props }) =>
+  <Button {...props}><Text>{children}</Text></Button>
+
+export default ButtonComponent

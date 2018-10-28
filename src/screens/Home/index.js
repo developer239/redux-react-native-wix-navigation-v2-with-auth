@@ -3,51 +3,64 @@ import {
   AsyncStorage,
 } from 'react-native'
 import { Navigation } from 'react-native-navigation'
+import styled from 'styled-components'
 import { Button, Flex } from '../../components'
-import { H1 } from '../../components/Text'
+import { H1, Text } from '../../components/Text'
 import { goToAuthScreen } from '../../navigation'
 import { USER_KEY } from '../../config'
+import Spacing from '../../components/Spacing'
 
-export default class HomeScreen extends React.Component {
-  static get options() {
-    return {
-      topBar: {
-        title: {
-          text: 'Home',
-        },
-      },
-    }
+const StyledText = styled(Text)`
+  margin: 15px 0;
+`
+
+const HomeScreen = ({ componentId }) => {
+  const handleLogOut = async () => {
+    await AsyncStorage.removeItem(USER_KEY)
+    goToAuthScreen()
   }
 
-  logout = async () => {
-    try {
-      await AsyncStorage.removeItem(USER_KEY)
-      goToAuthScreen()
-    } catch (err) {
-      console.log('error signing out...: ', err)
-    }
-  }
+  const handleOpenNestedScreenAPress = () => Navigation.push(componentId, {
+    component: {
+      name: 'Screen2',
+    },
+  })
 
-  render() {
-    console.log('props; ', this.props)
-    return (
+  return (
+    <Spacing marginHorizontal={20} marginVertical={20}>
       <Flex>
         <H1>Home Screen</H1>
+        <StyledText>
+          With React Native Navigation it is easy to make native transitions between
+          screens.
+        </StyledText>
         <Button
-          onPress={this.logout}
-          title="Log Out"
-        />
+          onPress={handleOpenNestedScreenAPress}
+          block
+        >
+          Open Nested Screen A
+        </Button>
+        <StyledText>
+          If you refresh the application or if you minimize it and then open it again you will
+          be signed in. Press the sign out button if you want to sign in as a different
+          user.
+        </StyledText>
         <Button
-          onPress={() => {
-            Navigation.push(this.props.componentId, {
-              component: {
-                name: 'Screen2',
-              },
-            })
-          }}
-          title="View next screen"
-        />
+          onPress={handleLogOut}
+        >
+          Sign Out
+        </Button>
       </Flex>
-    )
-  }
+    </Spacing>
+  )
 }
+
+HomeScreen.options = () => ({
+  topBar: {
+    title: {
+      text: 'Home',
+    },
+  },
+})
+
+export default HomeScreen
