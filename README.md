@@ -6,11 +6,11 @@
 
 ### Authorization
 
-Auth is as minimal as possible. All I wanted to show is how to navigate between public and secured application and how to keep user logged in.
+Auth is as minimal as possible. All I wanted to show, is how to navigate between public and secure application and how to keep a user logged in.
 
 ### Data Flow
 
-I only included redux. Most projects will be fine with [redux-thunk](https://github.com/gaearon/redux-thunk) If you are more advanced developer then you probably want to install either [redux-observables](https://github.com/redux-observable/redux-observable) or [redux-sagas](https://github.com/redux-saga/redux-saga). redux-observables are the cool thing to use but working with redux-sagas is much easier.
+I only included redux. Most projects will be fine with [redux-thunk](https://github.com/gaearon/redux-thunk). If you are more advanced developer, then you probably want to install either [redux-observables](https://github.com/redux-observable/redux-observable) or [redux-sagas](https://github.com/redux-saga/redux-saga). redux-observables are the cool thing to use but working with redux-sagas is much easier.
 
 ## Installation
 
@@ -22,7 +22,7 @@ The rest of the process is straightforward.
 2.  Link native libraries: `react-native link`
 3.  If you have MacOS Mojave or newer then you have to set legacy build system in `File -> Project Settings -> Build System`
 
-If you have any problems with building your application, please, look at FAQ section of this README or create an issue on github.
+If you have any problems with building your application, please, look at FAQ section of this README or create an issue on GitHub.
 
 ## Development
 
@@ -53,7 +53,7 @@ If you have any problems with building your application, please, look at FAQ sec
 
 ## FAQ
 
-##### Possible Build Issues
+### Possible Build Issues
 
 `native-base` is beautiful UI library, but sometimes it fails to link correctly:
 
