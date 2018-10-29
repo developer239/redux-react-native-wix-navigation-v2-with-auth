@@ -14,11 +14,11 @@ Official installation guide is [here](https://facebook.github.io/react-native/do
 
 The rest of the process is straightforward.
 
- 1) Install node_modules: `yarn install`
- 2) Link native libraries: `react-native link`
- 
+1.  Install node_modules: `yarn install`
+2.  Link native libraries: `react-native link`
+
 If you have any problems with building your application, please, look at FAQ section of this README or create an issue on github.
- 
+
 ## Development
 
 - `yarn start` starts react native server with js bundle
@@ -27,23 +27,24 @@ If you have any problems with building your application, please, look at FAQ sec
 - `yarn lint:js` runs eslint
 - `yarn lint:js:fix` fixes errors found by eslint
 - `yarn lint:css` runs stylelint
- 
+
 ## Main Dependencies
 
-* [React](https://github.com/facebook/react)
-* [React Native](https://github.com/facebook/react-native)
-* [Styled Components](https://github.com/styled-components/styled-components)
-* [Wix React Native Navigation](https://github.com/wix/react-native-navigation)
-* [Recompose](https://github.com/acdlite/recompose)
-* [Formik](https://github.com/jaredpalmer/formik)
-* [Yup](https://github.com/jquense/yup)
-* [Redux](http://redux.js.org)
+- [React](https://github.com/facebook/react)
+- [React Native](https://github.com/facebook/react-native)
+- [Styled Components](https://github.com/styled-components/styled-components)
+- [Wix React Native Navigation](https://github.com/wix/react-native-navigation)
+- [Recompose](https://github.com/acdlite/recompose)
+- [Formik](https://github.com/jaredpalmer/formik)
+- [Yup](https://github.com/jquense/yup)
+- [Redux](http://redux.js.org)
 
 ## Code Quality Tools
 
-* [eslint](https://github.com/eslint/eslint)
-* [stylelint](https://github.com/stylelint/stylelint)
-* [.editorconfig](http://editorconfig.org/)
+- [eslint](https://github.com/eslint/eslint)
+- [stylelint](https://github.com/stylelint/stylelint)
+- [prettier](https://github.com/prettier/prettier)
+- [.editorconfig](http://editorconfig.org/)
 
 ## FAQ
 
@@ -51,8 +52,8 @@ If you have any problems with building your application, please, look at FAQ sec
 
 `native-base` is beautiful UI library, but sometimes it fails to link correctly:
 
-1) `react-native unlink native-base`
-2) `yarn remove native-base`
-3) Delete fonts in app resources in xCode (left panel)
-4) `yarn install native-base`
-5) `react-native link`
+1. `react-native unlink native-base`
+2. `yarn remove native-base`
+3. Delete fonts in app resources in xCode (left panel)
+4. `yarn install native-base`
+5. `react-native link`
