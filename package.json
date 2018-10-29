@@ -41,7 +41,7 @@
     "yup": "0.26.6"
   },
   "devDependencies": {
-    "@strv/eslint-config-javascript": "8.3.1",
+    "@strv/eslint-config-javascript": "9.0.0",
     "babel-eslint": "10.0.1",
     "babel-jest": "23.6.0",
     "babel-plugin-module-resolver": "^3.1.1",
