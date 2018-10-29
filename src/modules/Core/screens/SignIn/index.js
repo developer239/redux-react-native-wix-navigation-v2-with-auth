@@ -1,15 +1,13 @@
 import React from 'react'
-import {
-  AsyncStorage,
-} from 'react-native'
+import { AsyncStorage } from 'react-native'
 import { Toast } from 'native-base'
-import wait from '../../services/wait'
-import { Container } from '../../components'
-import { H1 } from '../../components/Text'
-import { withNativeBaseRoot } from '../../hocs'
-import SignInForm from '../../forms/SignIn'
-import { goToHomeScreen } from '../../navigation'
-import { USER_KEY } from '../../config'
+import wait from '../../../../services/wait'
+import { Container } from '../../../../components'
+import { H1 } from '../../../../components/Text'
+import { withNativeBaseRoot } from '../../../../hocs'
+import SignInForm from '../../../../forms/SignIn'
+import { goToHomeScreen } from '../../../../navigation'
+import { USER_KEY } from '../../../../config'
 
 const SignInScreen = () => {
   const handleSubmit = async ({ email, password }, { resetForm }) => {

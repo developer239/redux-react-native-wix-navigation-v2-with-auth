@@ -1,11 +1,19 @@
 import { registerScreen, setRoot } from './services/navigation'
-import Home, { HOME_SCREEN } from './screens/Home'
-import Counter, { COUNTER_SCREEN } from './screens/Counter'
-import CounterNested, { COUNTER_NESTED_SCREEN } from './screens/CounterNested'
-import Initializing, { INITIALIZING_SCREEN } from './screens/Initializing'
-import NestedScreenA, { NESTED_A_SCREEN } from './screens/NestedScreenA'
-import NestedScreenB, { NESTED_B_SCREEN } from './screens/NestedScreenB'
-import SignIn, { SIGN_IN_SCREEN } from './screens/SignIn'
+import Home, { HOME_SCREEN } from './modules/Core/screens/Home'
+import Counter, { COUNTER_SCREEN } from './modules/Counter/screens/Counter'
+import CounterNested, {
+  COUNTER_NESTED_SCREEN,
+} from './modules/Counter/screens/CounterNested'
+import Initializing, {
+  INITIALIZING_SCREEN,
+} from './modules/Core/screens/Initializing'
+import NestedScreenA, {
+  NESTED_A_SCREEN,
+} from './modules/Core/screens/NestedScreenA'
+import NestedScreenB, {
+  NESTED_B_SCREEN,
+} from './modules/Core/screens/NestedScreenB'
+import SignIn, { SIGN_IN_SCREEN } from './modules/Core/screens/SignIn'
 
 export const registerScreens = () => {
   registerScreen(HOME_SCREEN.name, Home)
@@ -17,49 +25,51 @@ export const registerScreens = () => {
   registerScreen(NESTED_B_SCREEN.name, NestedScreenB)
 }
 
-export const goToAuthScreen = () => setRoot('stack', 'SignIn', [
-  {
-    component: {
-      name: SIGN_IN_SCREEN.name,
+export const goToAuthScreen = () =>
+  setRoot('stack', 'SignIn', [
+    {
+      component: {
+        name: SIGN_IN_SCREEN.name,
+      },
     },
-  },
-])
+  ])
 
-export const goToHomeScreen = () => setRoot('bottomTabs', 'App', [
-  {
-    stack: {
-      children: [
-        {
-          component: {
-            name: HOME_SCREEN.name,
-            options: {
-              bottomTab: {
-                fontSize: 14,
-                text: 'Home',
-                icon: require('./static/images/home.png'),
+export const goToHomeScreen = () =>
+  setRoot('bottomTabs', 'App', [
+    {
+      stack: {
+        children: [
+          {
+            component: {
+              name: HOME_SCREEN.name,
+              options: {
+                bottomTab: {
+                  fontSize: 14,
+                  text: 'Home',
+                  icon: require('./static/images/home.png'),
+                },
               },
             },
           },
-        },
-      ],
+        ],
+      },
     },
-  },
-  {
-    stack: {
-      children: [
-        {
-          component: {
-            name: COUNTER_SCREEN.name,
-            options: {
-              bottomTab: {
-                fontSize: 14,
-                text: 'Counter',
-                icon: require('./static/images/counter.png'),
+    {
+      stack: {
+        children: [
+          {
+            component: {
+              name: COUNTER_SCREEN.name,
+              options: {
+                bottomTab: {
+                  fontSize: 14,
+                  text: 'Counter',
+                  icon: require('./static/images/counter.png'),
+                },
               },
             },
           },
-        },
-      ],
+        ],
+      },
     },
-  },
-])
+  ])

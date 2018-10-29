@@ -2,20 +2,20 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Alert } from 'react-native'
 import { Navigation } from 'react-native-navigation'
-import {
-  compose,
-  withState,
-  lifecycle,
-} from 'recompose'
-import { Button, Container } from '../../components'
-import { H1, P } from '../../components/Text'
+import { compose, withState, lifecycle } from 'recompose'
+import { Button, Container } from '../../../../components'
+import { H1, P } from '../../../../components/Text'
 
 export const NESTED_B_SCREEN = {
   name: 'app.NestedB',
   title: 'Screen B',
 }
 
-const NestedScreenB = ({ componentId, isTopRightButton, setIsTopRightButton }) => {
+const NestedScreenB = ({
+  componentId,
+  isTopRightButton,
+  setIsTopRightButton,
+}) => {
   const handlePopPress = () => Navigation.popToRoot(componentId)
 
   const handleShowAlertButton = () => {
@@ -45,26 +45,26 @@ const NestedScreenB = ({ componentId, isTopRightButton, setIsTopRightButton }) =
     <Container marginHorizontal={20} marginVertical={20}>
       <H1>Screen B</H1>
       <P>
-        This is the end of the road. You can press the top left button to get to the previous
-        screen.
+        This is the end of the road. You can press the top left button to get to
+        the previous screen.
       </P>
       <P>
         On IOS you can also swipe from left to right in order close this screen.
       </P>
       <P>
-        If you want to go directly to the home screen then press the button bellow.
+        If you want to go directly to the home screen then press the button
+        bellow.
       </P>
-      <Button onPress={handlePopPress}>
-        Pop
-      </Button>
+      <Button onPress={handlePopPress}>Pop</Button>
       <P>
-        You can do some cool magic with Wix navigation. You can for example dynamically set
-        navigation buttons.
+        You can do some cool magic with Wix navigation. You can for example
+        dynamically set navigation buttons.
       </P>
-      {isTopRightButton
-        ? <Button onPress={handleHideAlertButton}>HIDE Top Right Button</Button>
-        : <Button onPress={handleShowAlertButton}>SHOW Top Right Button</Button>
-      }
+      {isTopRightButton ? (
+        <Button onPress={handleHideAlertButton}>HIDE Top Right Button</Button>
+      ) : (
+        <Button onPress={handleShowAlertButton}>SHOW Top Right Button</Button>
+      )}
     </Container>
   )
 }
@@ -80,7 +80,7 @@ const enhance = compose(
       }
       Navigation.events().bindComponent(this)
     },
-  }),
+  })
 )
 
 NestedScreenB.propTypes = {
