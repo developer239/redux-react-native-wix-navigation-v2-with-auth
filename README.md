@@ -10,8 +10,7 @@ Auth is as minimal as possible. All I wanted to show, is how to navigate between
 
 ### Preview
 
-![1](https://github.com/developer239/redux-react-native-wix-navigation-v2-with-auth/blob/master/ios-preview.gif?raw=true)
-![2](https://github.com/developer239/redux-react-native-wix-navigation-v2-with-auth/blob/master/android-preview.gif?raw=true)
+![1](https://github.com/developer239/redux-react-native-wix-navigation-v2-with-auth/blob/master/preview.gif?raw=true)
 
 ### Data Flow
 
