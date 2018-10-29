@@ -20,6 +20,7 @@ The rest of the process is straightforward.
 
 1.  Install node_modules: `yarn install`
 2.  Link native libraries: `react-native link`
+3.  If you have MacOS Mojave or newer then you have to set legacy build system in `File -> Project Settings -> Build System`
 
 If you have any problems with building your application, please, look at FAQ section of this README or create an issue on github.
 
@@ -52,12 +53,10 @@ If you have any problems with building your application, please, look at FAQ sec
 
 ## FAQ
 
-##### IOS Build Issues
+##### Possible Build Issues
 
 `native-base` is beautiful UI library, but sometimes it fails to link correctly:
 
 1. `react-native unlink native-base`
-2. `yarn remove native-base`
-3. Delete fonts in app resources in xCode (left panel)
-4. `yarn install native-base`
-5. `react-native link`
+2. Open XCode and remove `Resources` in `Left Panel -> Generated -> Resources`
+3. `react-native link`
