@@ -1,8 +1,15 @@
-import { Provider } from 'react-redux'
-import { startTabBasedApp } from './navigation'
-import { registerScreens } from './screens'
-import store from './store'
+import { Navigation } from 'react-native-navigation'
+import { registerScreens } from './navigation'
+import { INITIALIZING_SCREEN } from './modules/Core/screens/Initializing'
 
+registerScreens()
 
-registerScreens({ Provider, store })
-startTabBasedApp()
+Navigation.events().registerAppLaunchedListener(() => {
+  Navigation.setRoot({
+    root: {
+      component: {
+        name: INITIALIZING_SCREEN.name,
+      },
+    },
+  })
+})

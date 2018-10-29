@@ -1,15 +1,3 @@
 {
-  "presets": [
-    "react-native"
-  ],
-  "plugins": [
-    [
-      "module-resolver",
-      {
-        "root": [
-          "./src"
-        ]
-      }
-    ]
-  ]
+  "presets": ["react-native"]
 }

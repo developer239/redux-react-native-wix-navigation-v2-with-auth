@@ -1,12 +1,15 @@
-import Container from './Container'
-import H1 from './H1'
-import P from './P'
 import Button from './Button'
-
+import Container from './Container'
+import Form from './Form'
+import FormItem from './FormItem'
+import Input from './Input'
+import Spinner from './Spinner'
 
 export {
-  Container,
-  H1,
-  P,
   Button,
+  Container,
+  Form,
+  FormItem,
+  Input,
+  Spinner,
 }

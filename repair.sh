@@ -6,4 +6,3 @@ rm -fr $TMPDIR/react-*
 yarn install
 react-native link
 cd ios
-pod install

@@ -1,23 +1,10 @@
-## React Native Redux Wix Navigation
+## Redux React Native Wix Navigation v2 with Auth
 
-#### Main Dependencies
+### Authorization
 
-* [React](https://github.com/facebook/react) 16.4.1
-* [React Native](https://github.com/facebook/react-native) 0.56.0
-* [Redux](http://redux.js.org) 4.0.0
-* [Styled Components](https://github.com/styled-components/styled-components) 3.3.3
-* [Wix React Native Navigation](https://github.com/wix/react-native-navigation) 1.1.476
-* [Recompose](https://github.com/acdlite/recompose) 0.27.1
+Auth is as minimal as possible. All I wanted to show is how to navigate between public and secured application and how to keep user logged in.
 
-#### Code Quality Tools
-
-* [eslint](https://github.com/eslint/eslint) 5.1.0
-* [stylelint](https://github.com/stylelint/stylelint) 9.3.0
-* [jest](https://github.com/facebook/jest) 23.4.1
-* [enzyme](https://github.com/airbnb/enzyme) 3.3.0
-* [.editorconfig](http://editorconfig.org/)
-
-#### Data Flow
+### Data Flow
 
 I only included redux. Most projects will be fine with [redux-thunk](https://github.com/gaearon/redux-thunk) If you are more advanced developer then you probably want to install either [redux-observables](https://github.com/redux-observable/redux-observable) or [redux-sagas](https://github.com/redux-saga/redux-saga). redux-observables are the cool thing to use but working with redux-sagas is much easier.
 
@@ -27,40 +14,46 @@ Official installation guide is [here](https://facebook.github.io/react-native/do
 
 The rest of the process is straightforward.
 
- 1) Install node_modules: `yarn install`
- 2) Link native libraries: `react-native link`
+1.  Install node_modules: `yarn install`
+2.  Link native libraries: `react-native link`
+
+If you have any problems with building your application, please, look at FAQ section of this README or create an issue on github.
 
 ## Development
 
-Run dev server:
+- `yarn start` starts react native server with js bundle
+- `yarn ios` builds project for IOS
+- `yarn android` builds project for Android
+- `yarn lint:js` runs eslint
+- `yarn lint:js:fix` fixes errors found by eslint
+- `yarn lint:css` runs stylelint
 
-```
-$ yarn start
-```
+## Main Dependencies
 
-Run virtual device:
+- [React](https://github.com/facebook/react)
+- [React Native](https://github.com/facebook/react-native)
+- [Styled Components](https://github.com/styled-components/styled-components)
+- [Wix React Native Navigation](https://github.com/wix/react-native-navigation)
+- [Recompose](https://github.com/acdlite/recompose)
+- [Formik](https://github.com/jaredpalmer/formik)
+- [Yup](https://github.com/jquense/yup)
+- [Redux](http://redux.js.org)
 
-```
-$ yarn ios
-```
+## Code Quality Tools
 
-## Testing
+- [eslint](https://github.com/eslint/eslint)
+- [stylelint](https://github.com/stylelint/stylelint)
+- [prettier](https://github.com/prettier/prettier)
+- [.editorconfig](http://editorconfig.org/)
 
-Run jest:
+## FAQ
 
-```
-$ yarn test
-```
+##### IOS Build Issues
 
-## Preview
+`native-base` is beautiful UI library, but sometimes it fails to link correctly:
 
-![1](https://github.com/developer239/react-native-redux-wix-navigation-boilerplate/blob/master/preview.gif?raw=true)
-
-## Troubleshooting
-
-If you run into any problems try one or more of these points:
-
-* Clean up project in Xcode: `Xcode -> Product -> Clean`
-* Run `./repair.sh` in root folder
-* Start development server yourself from command line using `yarn start`. (because of cache)
-* Make sure that your device has access to internet.
+1. `react-native unlink native-base`
+2. `yarn remove native-base`
+3. Delete fonts in app resources in xCode (left panel)
+4. `yarn install native-base`
+5. `react-native link`

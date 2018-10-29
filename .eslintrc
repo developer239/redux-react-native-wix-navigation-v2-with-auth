@@ -1,39 +1,29 @@
 {
   "parser": "babel-eslint",
-  "extends": "airbnb",
-  "plugins": [
-    "react"
+  "extends": [
+    "@strv/javascript/environments/react/v16",
+    "@strv/javascript/environments/react/v15"
   ],
-  "settings": {
-    "import/resolver": {
-      "node": {
-        "paths": [
-          "./src"
-        ]
-      }
-    }
-  },
   "rules": {
-    "semi": 0,
-    "react/jsx-filename-extension": 0,
-    "jsx-a11y/href-no-hash": 0,
-    "jsx-a11y/anchor-is-valid": [
-      "warn",
+    "react/jsx-boolean-value": "error",
+    "react/jsx-key": "error",
+    "no-shadow": ["error", { "builtinGlobals": false, "hoist": "functions", "allow": [] }],
+    "max-len": [
+      "error",
       {
-        "aspects": [
-          "invalidHref"
-        ]
+        "code": 100
       }
-    ],
-    "react/require-default-props": 0,
-    "import/prefer-default-export": 0,
-    "import/no-extraneous-dependencies": 0
+    ]
   },
   "globals": {
-    "expect": true,
+    "require": true,
+    "process": true,
+    "module": true,
+    "__dirname": true,
     "describe": true,
-    "beforeEach": true,
-    "afterEach": true,
-    "it": true
+    "it": true,
+    "expect": true,
+    "jest": true,
+    "afterEach": true
   }
 }
