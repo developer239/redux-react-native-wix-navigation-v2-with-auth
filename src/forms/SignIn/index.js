@@ -10,14 +10,14 @@ import {
   FormItem,
   Input,
 } from '../../components'
-import { Text } from '../../components/Text'
+import { P } from '../../components/Text'
 
 // Validation helpers
 const isError = id => (touched, errors) => Boolean(touched[id] && errors[id])
 const isEmailError = isError('email')
 
 // Hint component
-const Hint = styled(Text)`
+const Hint = styled(P)`
   opacity: 0.65;
   font-size: 12px;
 `
@@ -47,7 +47,7 @@ const SignInForm = ({ onSubmit }) => (
             autoCapitalize="none"
             autoCorrect={false}
           />
-          {isEmailError(touched, errors) && <Icon name='close-circle' />}
+          {isEmailError(touched, errors) && <Icon name="close-circle" />}
         </FormItem>
         <FormItem>
           <Input

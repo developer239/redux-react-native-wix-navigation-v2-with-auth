@@ -4,7 +4,7 @@ import { compose } from 'recompose'
 import { connect } from 'react-redux'
 import { withRedux } from '../../hocs'
 import { Container, Button } from '../../components'
-import { Text, H1 } from '../../components/Text'
+import { P, H1 } from '../../components/Text'
 import { incrementCounter, decrementCounter, clearCounter } from '../../reducers/counter/actions'
 import { selectCounterValue } from '../../reducers/counter/selectors'
 import { Navigation } from 'react-native-navigation'
@@ -33,9 +33,9 @@ export const CounterScreen = ({
       <H1>
         Counter Screen
       </H1>
-      <Text>
+      <P>
         Counter store value: {counterValue}
-      </Text>
+      </P>
       <Button block onPress={dispatchIncrementCounter}>
         Increment Counter
       </Button>
@@ -45,12 +45,12 @@ export const CounterScreen = ({
       <Button block onPress={dispatchClearCounter}>
         Reset Counter
       </Button>
-      <Text>
+      <P>
         This is really simple screen connected to redux store. Using redux just to make one
         value in store increment would be silly. Go to the next screen if you want to see how you
         can
         use store in multiple places of your application.
-      </Text>
+      </P>
       <Button onPress={handleOpenNestedCounterScreen}>
         Dig Deeper
       </Button>
@@ -59,10 +59,11 @@ export const CounterScreen = ({
 }
 
 CounterScreen.propTypes = {
-  counterValue: PropTypes.number,
-  dispatchIncrementCounter: PropTypes.func,
-  dispatchDecrementCounter: PropTypes.func,
-  dispatchClearCounter: PropTypes.func,
+  componentId: PropTypes.string.isRequired,
+  counterValue: PropTypes.number.isRequired,
+  dispatchIncrementCounter: PropTypes.func.isRequired,
+  dispatchDecrementCounter: PropTypes.func.isRequired,
+  dispatchClearCounter: PropTypes.func.isRequired,
 }
 
 const mapStateToProps = state => ({

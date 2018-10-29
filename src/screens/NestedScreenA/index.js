@@ -1,8 +1,9 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Navigation } from 'react-native-navigation'
 import { NESTED_B_SCREEN } from '../NestedScreenB'
 import { Button, Container } from '../../components'
-import { H1, Text } from '../../components/Text'
+import { H1, P } from '../../components/Text'
 
 const NestedScreenA = ({ componentId }) => {
   const handleOpenNestedScreenBPress = () => Navigation.push(componentId, {
@@ -16,17 +17,17 @@ const NestedScreenA = ({ componentId }) => {
       <H1>
         Screen A
       </H1>
-      <Text>
+      <P>
         This is the first nested screen. Button that allows you to go back to previous screen was
         set automatically.
-      </Text>
-      <Text>
+      </P>
+      <P>
         But you can go even deeper!
-      </Text>
+      </P>
       <Button
         onPress={handleOpenNestedScreenBPress}
       >
-        Dig  Deeper
+        Dig Deeper
       </Button>
     </Container>
   )
@@ -35,6 +36,10 @@ const NestedScreenA = ({ componentId }) => {
 export const NESTED_A_SCREEN = {
   name: 'app.NestedA',
   title: 'Screen A',
+}
+
+NestedScreenA.propTypes = {
+  componentId: PropTypes.string.isRequired,
 }
 
 NestedScreenA.options = () => ({

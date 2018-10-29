@@ -1,0 +1,29 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "@strv/javascript/environments/react/v16",
+    "@strv/javascript/environments/react/v15"
+  ],
+  "rules": {
+    "react/jsx-boolean-value": "error",
+    "react/jsx-key": "error",
+    "no-shadow": ["error", { "builtinGlobals": false, "hoist": "functions", "allow": [] }],
+    "max-len": [
+      "error",
+      {
+        "code": 100
+      }
+    ]
+  },
+  "globals": {
+    "require": true,
+    "process": true,
+    "module": true,
+    "__dirname": true,
+    "describe": true,
+    "it": true,
+    "expect": true,
+    "jest": true,
+    "afterEach": true
+  }
+}

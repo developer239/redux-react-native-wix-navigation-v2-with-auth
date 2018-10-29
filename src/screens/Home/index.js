@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import {
   AsyncStorage,
 } from 'react-native'
@@ -6,7 +7,7 @@ import { Navigation } from 'react-native-navigation'
 import { USER_KEY } from '../../config'
 import { NESTED_A_SCREEN } from '../NestedScreenA'
 import { Button, Container } from '../../components'
-import { H1, Text } from '../../components/Text'
+import { H1, P } from '../../components/Text'
 import { goToAuthScreen } from '../../navigation'
 
 const HomeScreen = ({ componentId }) => {
@@ -24,21 +25,21 @@ const HomeScreen = ({ componentId }) => {
   return (
     <Container marginHorizontal={20} marginVertical={20}>
       <H1>Home Screen</H1>
-      <Text>
+      <P>
         With React Native Navigation it is easy to make native transitions between
         screens.
-      </Text>
+      </P>
       <Button
         onPress={handleOpenNestedScreenAPress}
         block
       >
         Open Nested Screen A
       </Button>
-      <Text>
+      <P>
         If you refresh the application or if you minimize it and then open it again you will
         be signed in. Press the sign out button if you want to sign in as a different
         user.
-      </Text>
+      </P>
       <Button
         onPress={handleLogOut}
       >
@@ -51,6 +52,10 @@ const HomeScreen = ({ componentId }) => {
 export const HOME_SCREEN = {
   name: 'app.Home',
   title: 'Home',
+}
+
+HomeScreen.propTypes = {
+  componentId: PropTypes.string.isRequired,
 }
 
 HomeScreen.options = () => ({

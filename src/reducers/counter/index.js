@@ -4,7 +4,7 @@ export const initialState = {
   value: 0,
 }
 
-export default (state = initialState, action) => {
+const counterReducer = (state = initialState, action) => {
   const { type } = action
 
   switch (type) {
@@ -24,3 +24,5 @@ export default (state = initialState, action) => {
       return state
   }
 }
+
+export default counterReducer

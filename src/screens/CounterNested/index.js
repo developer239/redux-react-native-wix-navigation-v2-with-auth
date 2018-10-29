@@ -5,7 +5,7 @@ import { compose } from 'recompose'
 import { connect } from 'react-redux'
 import { withRedux } from '../../hocs'
 import { Container } from '../../components'
-import { Text, H1 } from '../../components/Text'
+import { P, H1 } from '../../components/Text'
 import { selectCounterValue } from '../../reducers/counter/selectors'
 
 export const COUNTER_NESTED_SCREEN = {
@@ -20,9 +20,9 @@ export const CounterNestedScreen = ({
     <H1>
       It works!
     </H1>
-    <Text>
+    <P>
       Counter store value: {counterValue}
-    </Text>
+    </P>
     <Image
       source={{ uri: './parrot.gif' }}
     />
@@ -30,7 +30,7 @@ export const CounterNestedScreen = ({
 )
 
 CounterNestedScreen.propTypes = {
-  counterValue: PropTypes.number,
+  counterValue: PropTypes.number.isRequired,
 }
 
 const mapStateToProps = state => ({

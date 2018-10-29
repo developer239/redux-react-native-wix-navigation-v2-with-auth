@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Alert } from 'react-native'
 import { Navigation } from 'react-native-navigation'
 import {
@@ -7,7 +8,12 @@ import {
   lifecycle,
 } from 'recompose'
 import { Button, Container } from '../../components'
-import { H1, Text } from '../../components/Text'
+import { H1, P } from '../../components/Text'
+
+export const NESTED_B_SCREEN = {
+  name: 'app.NestedB',
+  title: 'Screen B',
+}
 
 const NestedScreenB = ({ componentId, isTopRightButton, setIsTopRightButton }) => {
   const handlePopPress = () => Navigation.popToRoot(componentId)
@@ -38,23 +44,23 @@ const NestedScreenB = ({ componentId, isTopRightButton, setIsTopRightButton }) =
   return (
     <Container marginHorizontal={20} marginVertical={20}>
       <H1>Screen B</H1>
-      <Text>
+      <P>
         This is the end of the road. You can press the top left button to get to the previous
         screen.
-      </Text>
-      <Text>
+      </P>
+      <P>
         On IOS you can also swipe from left to right in order close this screen.
-      </Text>
-      <Text>
+      </P>
+      <P>
         If you want to go directly to the home screen then press the button bellow.
-      </Text>
+      </P>
       <Button onPress={handlePopPress}>
         Pop
       </Button>
-      <Text>
+      <P>
         You can do some cool magic with Wix navigation. You can for example dynamically set
         navigation buttons.
-      </Text>
+      </P>
       {isTopRightButton
         ? <Button onPress={handleHideAlertButton}>HIDE Top Right Button</Button>
         : <Button onPress={handleShowAlertButton}>SHOW Top Right Button</Button>
@@ -63,17 +69,10 @@ const NestedScreenB = ({ componentId, isTopRightButton, setIsTopRightButton }) =
   )
 }
 
-export const NESTED_B_SCREEN = {
-  name: 'app.NestedB',
-  title: 'Screen B',
-}
-
 const enhance = compose(
   withState('isTopRightButton', 'setIsTopRightButton', false),
   lifecycle({
     componentDidMount() {
-      // This is not too nice but it looks like this is the only way with functional components
-      // https://wix.github.io/react-native-navigation/v2/#/docs/topBar-buttons?id=declaring-buttons-dynamically
       this.navigationButtonPressed = ({ buttonId }) => {
         if (buttonId === `${NESTED_B_SCREEN.name}.alertButton`) {
           Alert.alert('Yay it works!')
@@ -83,6 +82,12 @@ const enhance = compose(
     },
   }),
 )
+
+NestedScreenB.propTypes = {
+  componentId: PropTypes.string.isRequired,
+  isTopRightButton: PropTypes.bool.isRequired,
+  setIsTopRightButton: PropTypes.func.isRequired,
+}
 
 const EnhancedNestedScreenB = enhance(NestedScreenB)
 
