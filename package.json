@@ -7,7 +7,8 @@
     "android": "node node_modules/react-native/local-cli/cli.js run-android",
     "ios": "node node_modules/react-native/local-cli/cli.js run-ios",
     "lint:js": "eslint .",
-    "lint:js:fix": "eslint . --fix"
+    "lint:js:fix": "eslint . --fix",
+    "lint:css": "node node_modules/.bin/stylelint ./src"
   },
   "dependencies": {
     "formik": "^1.3.1",
@@ -31,6 +32,10 @@
     "jest": "23.6.0",
     "prop-types": "^15.6.2",
     "react-test-renderer": "16.4.1",
+    "stylelint": "^9.7.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.5.0",
     "supports-color": "^5.5.0"
   },
   "jest": {
