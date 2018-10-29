@@ -8,6 +8,11 @@
 
 Auth is as minimal as possible. All I wanted to show, is how to navigate between public and secure application and how to keep a user logged in.
 
+### Preview
+
+![1](https://github.com/developer239/redux-react-native-wix-navigation-v2-with-auth/blob/master/ios-preview.gif?raw=true)
+![2](https://github.com/developer239/redux-react-native-wix-navigation-v2-with-auth/blob/master/android-preview.gif?raw=true)
+
 ### Data Flow
 
 I only included redux. Most projects will be fine with [redux-thunk](https://github.com/gaearon/redux-thunk). If you are more advanced developer, then you probably want to install either [redux-observables](https://github.com/redux-observable/redux-observable) or [redux-sagas](https://github.com/redux-saga/redux-saga). redux-observables are the cool thing to use but working with redux-sagas is much easier.
