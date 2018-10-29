@@ -47,12 +47,11 @@ export const CounterScreen = ({
         Reset Counter
       </Button>
       <P>
-        This is really simple screen connected to redux store. Using redux just
-        to make one value in store increment would be silly. Go to the next
-        screen if you want to see how you can use store in multiple places of
-        your application.
+        This screen is connected to the redux store. Using redux just to control
+        one value would be unreasonable. Continue to the next screen if you want
+        to see a real redux power in action.
       </P>
-      <Button onPress={handleOpenNestedCounterScreen}>Dig Deeper</Button>
+      <Button onPress={handleOpenNestedCounterScreen}>Continue</Button>
     </Container>
   )
 }

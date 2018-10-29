@@ -45,20 +45,16 @@ const NestedScreenB = ({
     <Container marginHorizontal={20} marginVertical={20}>
       <H1>Screen B</H1>
       <P>
-        This is the end of the road. You can press the top left button to get to
+        You hit the end of the road. You can press the top left button to get to
         the previous screen.
       </P>
-      <P>
-        On IOS you can also swipe from left to right in order close this screen.
-      </P>
-      <P>
-        If you want to go directly to the home screen then press the button
-        bellow.
-      </P>
+      <P>On IOS you can also swipe from left to right to close this screen.</P>
+      <P>Press the button below to go directly to the home screen.</P>
       <Button onPress={handlePopPress}>Pop</Button>
       <P>
-        You can do some cool magic with Wix navigation. You can for example
-        dynamically set navigation buttons.
+        Wix Navigation could be hard to understand at first, but it allows you
+        to do many different things. For example, dynamically set navigation
+        buttons.
       </P>
       {isTopRightButton ? (
         <Button onPress={handleHideAlertButton}>HIDE Top Right Button</Button>

@@ -17,11 +17,11 @@ const NestedScreenA = ({ componentId }) => {
     <Container marginHorizontal={20} marginVertical={20}>
       <H1>Screen A</H1>
       <P>
-        This is the first nested screen. Button that allows you to go back to
-        previous screen was set automatically.
+        You are on the first nested screen. Use the top right button if you want
+        to go back.
       </P>
-      <P>But you can go even deeper!</P>
-      <Button onPress={handleOpenNestedScreenBPress}>Dig Deeper</Button>
+      <P>But you can go even further!</P>
+      <Button onPress={handleOpenNestedScreenBPress}>Go Further</Button>
     </Container>
   )
 }

@@ -32,9 +32,8 @@ const HomeScreen = ({ componentId }) => {
         Open Nested Screen A
       </Button>
       <P>
-        If you refresh the application or if you minimize it and then open it
-        again you will be signed in. Press the sign out button if you want to
-        sign in as a different user.
+        You will be signed in until you sign out. Press the button below if you
+        want to change user profile.
       </P>
       <Button onPress={handleLogOut}>Sign Out</Button>
     </Container>
