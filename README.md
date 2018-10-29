@@ -1,5 +1,7 @@
 ## Redux React Native Wix Navigation v2 with Auth
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/developer239/redux-react-native-wix-navigation-v2-with-auth.svg)](https://greenkeeper.io/)
+
 ### Authorization
 
 Auth is as minimal as possible. All I wanted to show is how to navigate between public and secured application and how to keep user logged in.
