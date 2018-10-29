@@ -4,13 +4,8 @@ import styled from 'styled-components/native'
 import { Icon } from 'native-base'
 import * as Yup from 'yup'
 import { Formik } from 'formik'
-import {
-  Button,
-  Form,
-  FormItem,
-  Input,
-} from '../../components'
-import { P } from '../../components/Text'
+import { Button, Form, FormItem, Input } from 'components'
+import { P } from 'components/Text'
 
 // Validation helpers
 const isError = id => (touched, errors) => Boolean(touched[id] && errors[id])
@@ -25,9 +20,11 @@ const Hint = styled(P)`
 const SignInForm = ({ onSubmit }) => (
   <Formik
     initialValues={{ email: '', password: '' }}
-    validationSchema={() => Yup.object().shape({
-      email: Yup.string().required('email is required'),
-    })}
+    validationSchema={() =>
+      Yup.object().shape({
+        email: Yup.string().required('email is required'),
+      })
+    }
     onSubmit={onSubmit}
   >
     {({

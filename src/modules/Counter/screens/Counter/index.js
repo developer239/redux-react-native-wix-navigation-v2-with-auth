@@ -2,16 +2,16 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { compose } from 'recompose'
 import { connect } from 'react-redux'
-import { withRedux } from '../../../../hocs'
-import { Container, Button } from '../../../../components'
-import { P, H1 } from '../../../../components/Text'
+import { withRedux } from 'hocs'
+import { Container, Button } from 'components'
+import { P, H1 } from 'components/Text'
+import { Navigation } from 'react-native-navigation'
 import {
   incrementCounter,
   decrementCounter,
   clearCounter,
 } from '../../ducks/actions'
 import { selectCounterValue } from '../../ducks/selectors'
-import { Navigation } from 'react-native-navigation'
 import { COUNTER_NESTED_SCREEN } from '../CounterNested'
 
 export const COUNTER_SCREEN = {

@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Navigation } from 'react-native-navigation'
+import { Button, Container } from 'components'
+import { H1, P } from 'components/Text'
 import { NESTED_B_SCREEN } from '../NestedScreenB'
-import { Button, Container } from '../../../../components'
-import { H1, P } from '../../../../components/Text'
 
 const NestedScreenA = ({ componentId }) => {
   const handleOpenNestedScreenBPress = () =>

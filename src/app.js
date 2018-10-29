@@ -1,6 +1,6 @@
 import { Navigation } from 'react-native-navigation'
-import { registerScreens } from './navigation'
-import { INITIALIZING_SCREEN } from './modules/Core/screens/Initializing'
+import { registerScreens } from 'navigation'
+import { INITIALIZING_SCREEN } from 'modules/Core/screens/Initializing'
 
 registerScreens()
 

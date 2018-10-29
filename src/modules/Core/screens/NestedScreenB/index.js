@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { Alert } from 'react-native'
 import { Navigation } from 'react-native-navigation'
 import { compose, withState, lifecycle } from 'recompose'
-import { Button, Container } from '../../../../components'
-import { H1, P } from '../../../../components/Text'
+import { Button, Container } from 'components'
+import { H1, P } from 'components/Text'
 
 export const NESTED_B_SCREEN = {
   name: 'app.NestedB',

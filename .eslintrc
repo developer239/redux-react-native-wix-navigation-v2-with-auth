@@ -4,6 +4,15 @@
     "@strv/javascript/environments/react/v16",
     "@strv/javascript/environments/react/v15"
   ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": [
+          "./src"
+        ]
+      }
+    }
+  },
   "rules": {
     "react/jsx-boolean-value": "error",
     "react/jsx-key": "error",

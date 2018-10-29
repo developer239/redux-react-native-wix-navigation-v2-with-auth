@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { AsyncStorage } from 'react-native'
 import { Navigation } from 'react-native-navigation'
-import { USER_KEY } from '../../../../config'
+import { USER_KEY } from 'config'
+import { Button, Container } from 'components'
+import { H1, P } from 'components/Text'
+import { goToAuthScreen } from 'navigation'
 import { NESTED_A_SCREEN } from '../NestedScreenA'
-import { Button, Container } from '../../../../components'
-import { H1, P } from '../../../../components/Text'
-import { goToAuthScreen } from '../../../../navigation'
 
 const HomeScreen = ({ componentId }) => {
   const handleLogOut = async () => {

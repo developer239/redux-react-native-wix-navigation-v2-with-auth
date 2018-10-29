@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import { Image } from 'react-native'
 import { compose } from 'recompose'
 import { connect } from 'react-redux'
-import { withRedux } from '../../../../hocs'
-import { Container } from '../../../../components'
-import { P, H1 } from '../../../../components/Text'
+import { withRedux } from 'hocs'
+import { Container } from 'components'
+import { P, H1 } from 'components/Text'
 import { selectCounterValue } from '../../ducks/selectors'
 
 export const COUNTER_NESTED_SCREEN = {
