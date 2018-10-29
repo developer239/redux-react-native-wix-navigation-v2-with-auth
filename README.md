@@ -24,6 +24,9 @@ If you have any problems with building your application, please, look at FAQ sec
 - `yarn start` starts react native server with js bundle
 - `yarn ios` builds project for IOS
 - `yarn android` builds project for Android
+- `yarn lint:js` runs eslint
+- `yarn lint:js:fix` fixes errors found by eslint
+- `yarn lint:css` runs stylelint
  
 ## Main Dependencies
 
