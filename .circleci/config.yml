@@ -35,7 +35,7 @@ jobs:
         name: Run Test and Coverage
         command: |
           ./cc-test-reporter before-build
-          npm test -- --coverage
+          yarn test -- --coverage
           ./cc-test-reporter after-build --exit-code $?
 
 workflows:
