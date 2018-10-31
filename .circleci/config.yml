@@ -13,6 +13,12 @@ jobs:
     - restore_cache:
         key: node-v1-{{ checksum "package.json" }}-{{ arch }}
 
+    - run:
+        name: Setup Code Climate test-reporter
+        command: |
+          curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+          chmod +x ./cc-test-reporter
+
     - run: yarn install
 
     - save_cache:
