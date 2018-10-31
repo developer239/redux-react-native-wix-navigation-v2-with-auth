@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/developer239/redux-react-native-wix-navigation-v2-with-auth.svg?style=svg)](https://circleci.com/gh/developer239/redux-react-native-wix-navigation-v2-with-auth)
 [![Maintainability](https://api.codeclimate.com/v1/badges/1300f5103979d206a12b/maintainability)](https://codeclimate.com/github/developer239/redux-react-native-wix-navigation-v2-with-auth/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/1300f5103979d206a12b/test_coverage)](https://codeclimate.com/github/developer239/redux-react-native-wix-navigation-v2-with-auth/test_coverage)
 [![Greenkeeper badge](https://badges.greenkeeper.io/developer239/redux-react-native-wix-navigation-v2-with-auth.svg)](https://greenkeeper.io/)
