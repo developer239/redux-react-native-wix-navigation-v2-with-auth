@@ -77,6 +77,8 @@
     "eslint",
     "styled-is",
     "yup",
-    "style-lint"
+    "style-lint",
+    "jest",
+    "react-test-renderer"
   ]
 }
