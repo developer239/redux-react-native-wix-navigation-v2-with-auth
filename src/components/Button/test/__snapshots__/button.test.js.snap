@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders correctly 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "alignSelf": "flex-start",
+      "backgroundColor": "#007aff",
+      "borderBottomWidth": null,
+      "borderColor": "#007aff",
+      "borderLeftWidth": null,
+      "borderRadius": 5,
+      "borderRightWidth": null,
+      "borderTopWidth": null,
+      "borderWidth": undefined,
+      "elevation": 2,
+      "flexDirection": "row",
+      "height": 45,
+      "justifyContent": "space-between",
+      "marginBottom": 15,
+      "opacity": 1,
+      "paddingBottom": 6,
+      "paddingTop": 6,
+      "shadowColor": undefined,
+      "shadowOffset": undefined,
+      "shadowOpacity": undefined,
+      "shadowRadius": undefined,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "color": "#fff",
+        "fontFamily": "System",
+        "fontSize": 16.5,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+      }
+    }
+    uppercase={false}
+  >
+    Some Text
+  </Text>
+</View>
+`;
