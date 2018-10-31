@@ -1,0 +1,39 @@
+version: 2
+jobs:
+  node:
+    working_directory: ~/demo-react-native
+    docker:
+    - image: circleci/node:8
+    steps:
+    - checkout
+
+    - restore_cache:
+        key: yarn-v1-{{ checksum "yarn.lock" }}-{{ arch }}
+
+    - restore_cache:
+        key: node-v1-{{ checksum "package.json" }}-{{ arch }}
+
+    - run: yarn install
+
+    - save_cache:
+        key: yarn-v1-{{ checksum "yarn.lock" }}-{{ arch }}
+        paths:
+        - ~/.cache/yarn
+
+    - save_cache:
+        key: node-v1-{{ checksum "package.json" }}-{{ arch }}
+        paths:
+        - node_modules
+
+    - run:
+        name: Run Test and Coverage
+        command: |
+          ./cc-test-reporter before-build
+          yarn test:coverage
+          ./cc-test-reporter after-build --exit-code $?
+
+workflows:
+  version: 2
+  node-android-ios:
+    jobs:
+    - node
