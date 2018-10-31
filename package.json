@@ -9,8 +9,7 @@
     "lint:js": "eslint .",
     "lint:js:fix": "eslint . --fix",
     "lint:css": "node node_modules/.bin/stylelint ./src",
-    "test": "jest",
-    "test:coverage": "jest --coverage"
+    "test": "jest"
   },
   "husky": {
     "hooks": {
