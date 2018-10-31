@@ -50,6 +50,7 @@ If you have any problems with building your application, please, look at FAQ sec
 
 ## Code Quality Tools
 
+- [jest](https://github.com/facebook/jest)
 - [eslint](https://github.com/eslint/eslint)
 - [stylelint](https://github.com/stylelint/stylelint)
 - [prettier](https://github.com/prettier/prettier)
