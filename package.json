@@ -29,7 +29,7 @@
     ]
   },
   "dependencies": {
-    "formik": "1.3.2",
+    "formik": "1.4.0",
     "native-base": "2.8.1",
     "react": "16.6.1",
     "react-native": "0.56.1",
