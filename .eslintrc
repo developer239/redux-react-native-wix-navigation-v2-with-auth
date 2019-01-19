@@ -33,6 +33,7 @@
     "it": true,
     "expect": true,
     "jest": true,
-    "afterEach": true
+    "afterEach": true,
+    "test": true
   }
 }
