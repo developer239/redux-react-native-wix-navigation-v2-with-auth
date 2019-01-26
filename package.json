@@ -25,7 +25,8 @@
   "greenkeeper": {
     "ignore": [
       "react-native",
-      "react-native-navigation"
+      "react-native-navigation",
+      "react-redux"
     ]
   },
   "dependencies": {
