@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "formik": "1.5.0",
-    "native-base": "2.10.0",
+    "native-base": "2.12.0",
     "react": "16.8.1",
     "react-native": "0.56.1",
     "react-native-navigation": "2.7.1",
