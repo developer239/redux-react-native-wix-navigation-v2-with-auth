@@ -4,7 +4,10 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start --reset-cache",
-    "test": "jest"
+    "android": "node node_modules/react-native/local-cli/cli.js run-android",
+    "ios": "node node_modules/react-native/local-cli/cli.js run-ios",
+    "lint:ts": "node node_modules/.bin/tslint src/**/*.ts{,x}",
+    "lint:css": "node node_modules/.bin/stylelint ./src"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.2.1",
@@ -23,6 +26,7 @@
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/runtime": "^7.3.4",
+    "@strv/stylelint-config-styled-components": "^1.0.0",
     "@types/jest": "^24.0.11",
     "@types/ramda": "^0.26.3",
     "@types/react": "^16.8.8",
@@ -35,7 +39,11 @@
     "babel-jest": "^24.5.0",
     "jest": "^24.5.0",
     "metro-react-native-babel-preset": "^0.53.1",
+    "prettier": "^1.16.4",
     "react-test-renderer": "^16.8.4",
+    "stylelint": "^9.10.1",
+    "tslint": "^5.14.0",
+    "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.3.3333"
   },
   "jest": {
