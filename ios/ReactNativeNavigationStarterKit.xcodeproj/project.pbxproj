@@ -58,7 +58,7 @@
 		1BAB35086B7D49AC9F696ED0 /* rubicon-icon-font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B990E7C92EA54FFD949571CF /* rubicon-icon-font.ttf */; };
 		3FBB28699541499FA500DACF /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04050E134DFD406B9303A389 /* SimpleLineIcons.ttf */; };
 		7ED62312C30C40F7B2DC4658 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 243CF96729C2479B9F81D1C1 /* Zocial.ttf */; };
-		119D894A33DC42D28E9B0886 /* libRNCAsyncStorage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D7619F9A4B4D76913FAD6E /* libRNCAsyncStorage.a */; };
+		881C45F955504A199D5D7D6D /* libRNCAsyncStorage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2243A3A8168D4B44B9BE0E3F /* libRNCAsyncStorage.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -399,8 +399,8 @@
 		B990E7C92EA54FFD949571CF /* rubicon-icon-font.ttf */ = {isa = PBXFileReference; name = "rubicon-icon-font.ttf"; path = "../node_modules/native-base/Fonts/rubicon-icon-font.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		04050E134DFD406B9303A389 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/native-base/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		243CF96729C2479B9F81D1C1 /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/native-base/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		ED8917F1913143BAABE379B0 /* RNCAsyncStorage.xcodeproj */ = {isa = PBXFileReference; name = "RNCAsyncStorage.xcodeproj"; path = "../node_modules/@react-native-community/async-storage/ios/RNCAsyncStorage.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		14D7619F9A4B4D76913FAD6E /* libRNCAsyncStorage.a */ = {isa = PBXFileReference; name = "libRNCAsyncStorage.a"; path = "libRNCAsyncStorage.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		D18F8A82149F4B9D9FB6F98C /* RNCAsyncStorage.xcodeproj */ = {isa = PBXFileReference; name = "RNCAsyncStorage.xcodeproj"; path = "../node_modules/@react-native-community/async-storage/ios/RNCAsyncStorage.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		2243A3A8168D4B44B9BE0E3F /* libRNCAsyncStorage.a */ = {isa = PBXFileReference; name = "libRNCAsyncStorage.a"; path = "libRNCAsyncStorage.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -430,7 +430,7 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
-				119D894A33DC42D28E9B0886 /* libRNCAsyncStorage.a in Frameworks */,
+				881C45F955504A199D5D7D6D /* libRNCAsyncStorage.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,7 +621,7 @@
 				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
-				ED8917F1913143BAABE379B0 /* RNCAsyncStorage.xcodeproj */,
+				D18F8A82149F4B9D9FB6F98C /* RNCAsyncStorage.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
