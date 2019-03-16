@@ -73,6 +73,6 @@ Underlying error (domain=MIInstallerErrorDomain, code=35):
 ```
 
 **Solution:**
-Run `yarn ios`
+Run `yarn ios` again 😅
 
-If you have any undocumented problems, please, create new issue. I will try answer your questions.
+If you have any undocumented problems, please, create new issue. I will be happy answer your questions.
