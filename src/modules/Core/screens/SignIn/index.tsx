@@ -1,5 +1,5 @@
 import React from 'react'
-import { AsyncStorage } from 'react-native'
+import AsyncStorage from '@react-native-community/async-storage'
 import { Toast } from 'native-base'
 import wait from '../../../../services/wait'
 import { Container } from '../../../../components'
@@ -16,7 +16,10 @@ export const SIGN_IN_SCREEN = {
 }
 
 const SignInScreen = () => {
-  const handleSubmit = async ({ email, password }: ISignInFormValues, { resetForm }: FormikActions<ISignInFormValues>) => {
+  const handleSubmit = async (
+    { email, password }: ISignInFormValues,
+    { resetForm }: FormikActions<ISignInFormValues>
+  ) => {
     // Fake server response delay
     await wait(1000)
 

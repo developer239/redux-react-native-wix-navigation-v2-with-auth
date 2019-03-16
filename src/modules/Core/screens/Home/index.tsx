@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react'
-import { AsyncStorage } from 'react-native'
+import AsyncStorage from '@react-native-community/async-storage'
 import { Navigation } from 'react-native-navigation'
 import { Toast } from 'native-base'
 import { USER_KEY } from '../../../../config'
@@ -19,7 +19,7 @@ const HomeScreen: FunctionComponent<IProps> = ({ componentId }) => {
     try {
       await AsyncStorage.removeItem(USER_KEY)
       await goToAuthScreen()
-    } catch(e) {
+    } catch (e) {
       Toast.show({
         text: 'Logout failed!',
         type: 'danger',
