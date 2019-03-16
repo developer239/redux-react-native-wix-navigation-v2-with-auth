@@ -1,12 +1,13 @@
 [![CircleCI](https://circleci.com/gh/developer239/redux-react-native-wix-navigation-v2-with-auth.svg?style=svg)](https://circleci.com/gh/developer239/redux-react-native-wix-navigation-v2-with-auth)
 [![Maintainability](https://api.codeclimate.com/v1/badges/1300f5103979d206a12b/maintainability)](https://codeclimate.com/github/developer239/redux-react-native-wix-navigation-v2-with-auth/maintainability)
 [![Greenkeeper badge](https://badges.greenkeeper.io/developer239/redux-react-native-wix-navigation-v2-with-auth.svg)](https://greenkeeper.io/)
+[![TypeScript](https://badges.frapsoft.com/typescript/version/typescript-next.svg?v=101)](https://www.typescriptlang.org/)
 
 ## Redux React Native Wix Navigation v2 with Auth
 
 ### Authorization
 
-Auth is as minimal as possible. All I wanted to show, is how to navigate between public and secure application and how to keep a user logged in.
+All I wanted to show, is how to navigate between public and secured application and how to keep a user logged in.
 
 ### Preview
 
@@ -24,7 +25,6 @@ The rest of the process is straightforward.
 
 1.  Install node_modules: `yarn install`
 2.  Link native libraries: `react-native link`
-3.  If you have MacOS Mojave or newer then you have to set legacy build system in `File -> Project Settings -> Build System`
 
 If you have any problems with building your application, please, look at FAQ section of this README or create an issue on GitHub.
 
@@ -33,8 +33,7 @@ If you have any problems with building your application, please, look at FAQ sec
 - `yarn start` starts react native server with js bundle
 - `yarn ios` builds project for IOS
 - `yarn android` builds project for Android
-- `yarn lint:js` runs eslint
-- `yarn lint:js:fix` fixes errors found by eslint
+- `yarn lint:ts` runs eslint
 - `yarn lint:css` runs stylelint
 
 ## Main Dependencies
@@ -43,15 +42,13 @@ If you have any problems with building your application, please, look at FAQ sec
 - [React Native](https://github.com/facebook/react-native)
 - [Styled Components](https://github.com/styled-components/styled-components)
 - [Wix React Native Navigation](https://github.com/wix/react-native-navigation)
-- [Recompose](https://github.com/acdlite/recompose)
 - [Formik](https://github.com/jaredpalmer/formik)
 - [Yup](https://github.com/jquense/yup)
 - [Redux](http://redux.js.org)
 
 ## Code Quality Tools
 
-- [jest](https://github.com/facebook/jest)
-- [eslint](https://github.com/eslint/eslint)
+- [tslint](https://palantir.github.io/tslint)
 - [stylelint](https://github.com/stylelint/stylelint)
 - [prettier](https://github.com/prettier/prettier)
 - [.editorconfig](http://editorconfig.org/)
@@ -60,8 +57,4 @@ If you have any problems with building your application, please, look at FAQ sec
 
 ### Possible Build Issues
 
-`native-base` is beautiful UI library, but sometimes it fails to link correctly:
-
-1. `react-native unlink native-base`
-2. Open XCode and remove `Resources` in `Left Panel -> Generated -> Resources`
-3. `react-native link`
+There are no issues at this moment. If you have problem with any part of installation, please create issue I will try answer your questions.

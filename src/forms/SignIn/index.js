@@ -1,30 +1,18 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import styled from 'styled-components/native'
 import { Icon } from 'native-base'
-import * as Yup from 'yup'
 import { Formik } from 'formik'
-import { Button, Form, FormItem, Input } from 'components'
-import { P } from 'components/Text'
-
-// Validation helpers
-const isError = id => (touched, errors) => Boolean(touched[id] && errors[id])
-const isEmailError = isError('email')
-
-// Hint component
-const Hint = styled(P)`
-  opacity: 0.65;
-  font-size: 12px;
-`
+import { Button, Form, FormItem, Input } from '../../components'
+import { Hint } from './styled'
+import {
+  getValidationSchema,
+  initialValues,
+  isEmailError
+} from './data'
 
 const SignInForm = ({ onSubmit }) => (
   <Formik
-    initialValues={{ email: '', password: '' }}
-    validationSchema={() =>
-      Yup.object().shape({
-        email: Yup.string().required('email is required'),
-      })
-    }
+    initialValues={initialValues}
+    validationSchema={getValidationSchema}
     onSubmit={onSubmit}
   >
     {({
@@ -64,9 +52,5 @@ const SignInForm = ({ onSubmit }) => (
     )}
   </Formik>
 )
-
-SignInForm.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
-}
 
 export default SignInForm
