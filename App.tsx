@@ -1,9 +1,11 @@
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
- *
+ * 
+ * Generated with the TypeScript template
+ * https://github.com/emin93/react-native-template-typescript
+ * 
  * @format
- * @flow
  */
 
 import React, {Component} from 'react';
@@ -16,13 +18,13 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-type Props = {};
+interface Props {}
 export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
+        <Text style={styles.instructions}>To get started, edit App.tsx</Text>
         <Text style={styles.instructions}>{instructions}</Text>
       </View>
     );
