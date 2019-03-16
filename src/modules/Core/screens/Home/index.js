@@ -1,5 +1,5 @@
 import React from 'react'
-import AsyncStorage from '@react-native-community/async-storage'
+import { AsyncStorage } from 'react-native'
 import { Navigation } from 'react-native-navigation'
 import { USER_KEY } from '../../../../config'
 import { Button, Container } from '../../../../components'

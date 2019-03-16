@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import AsyncStorage from '@react-native-community/async-storage'
+import { AsyncStorage } from 'react-native'
 import { Container, Spinner } from '../../../../components'
 import { goToAuthScreen, goToHomeScreen } from '../../../../navigation'
 import { USER_KEY } from '../../../../config'

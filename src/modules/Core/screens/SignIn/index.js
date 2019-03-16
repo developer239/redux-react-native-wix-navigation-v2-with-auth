@@ -1,5 +1,5 @@
 import React from 'react'
-import AsyncStorage from '@react-native-community/async-storage'
+import { AsyncStorage } from 'react-native'
 import { Toast } from 'native-base'
 import wait from '../../../../services/wait'
 import { Container } from '../../../../components'
