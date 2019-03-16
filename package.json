@@ -1,7 +1,6 @@
 {
   "name": "ReactNativeNavigationStarterKit",
-  "version": "0.0.1",
-  "private": true,
+  "version": "1.0.0",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start --reset-cache",
     "android": "node node_modules/react-native/local-cli/cli.js run-android",
@@ -61,5 +60,33 @@
   },
   "jest": {
     "preset": "react-native"
-  }
+  },
+  "greenkeeper": {
+    "ignore": [
+      "react",
+      "react-native",
+      "react-native-navigation"
+    ]
+  },
+  "keywords": [
+    "formik",
+    "native-base",
+    "react",
+    "hooks",
+    "react-hooks",
+    "react-native",
+    "react-native-navigation",
+    "wix",
+    "redux",
+    "react-redux",
+    "recompose",
+    "styled-components",
+    "stylelint",
+    "eslint",
+    "styled-is",
+    "yup",
+    "jest",
+    "react-test-renderer",
+    "authorization"
+  ]
 }

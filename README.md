@@ -7,7 +7,7 @@
 
 ### Authorization
 
-Authorization is as minimal as possible. All I wanted to show, is how to navigate between public and secure application and how to keep a user logged in.
+All I wanted to show, is how to navigate between public and secured application and how to keep a user logged in.
 
 ### Preview
 
