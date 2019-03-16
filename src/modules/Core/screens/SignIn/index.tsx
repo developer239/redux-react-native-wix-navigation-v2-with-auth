@@ -8,10 +8,16 @@ import { withNativeBaseRoot } from '../../../../hocs'
 import SignInForm from '../../../../forms/SignIn'
 import { goToHomeScreen } from '../../../../navigation'
 import { USER_KEY } from '../../../../config'
+import { ISignInFormValues } from '../../../../forms/SignIn/types'
+import { FormikActions } from 'formik'
+
+export const SIGN_IN_SCREEN = {
+  name: 'app.SignIn',
+}
 
 const SignInScreen = () => {
-  const handleSubmit = async ({ email, password }, { resetForm }) => {
-    // Fake response from server
+  const handleSubmit = async ({ email, password }: ISignInFormValues, { resetForm }: FormikActions<ISignInFormValues>) => {
+    // Fake server response delay
     await wait(1000)
 
     if (password !== 'password') {
@@ -24,24 +30,20 @@ const SignInScreen = () => {
     }
 
     await AsyncStorage.setItem(USER_KEY, email)
-    goToHomeScreen()
+    await goToHomeScreen()
   }
 
   return (
-    <Container center marginHorizontal={20}>
+    <Container isCenter marginHorizontal={20}>
       <H1>Sign In</H1>
       <SignInForm onSubmit={handleSubmit} />
     </Container>
   )
 }
 
-export const SIGN_IN_SCREEN = {
-  name: 'app.SignIn',
-}
-
 const EnhancedSignInScreen = withNativeBaseRoot(SignInScreen)
 
-// TODO: Hoist Non React Statics
+// @ts-ignore
 EnhancedSignInScreen.options = () => ({
   topBar: {
     visible: false,

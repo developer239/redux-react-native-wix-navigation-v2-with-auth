@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import { Navigation } from 'react-native-navigation'
 import { Button, Container } from '../../../../components'
 import { H1, P } from '../../../../components/Text'
 import { NESTED_B_SCREEN } from '../NestedScreenB'
+import { IProps } from './types'
 
-const NestedScreenA = ({ componentId }) => {
+export const NESTED_A_SCREEN = {
+  name: 'app.NestedA',
+  title: 'Screen A',
+}
+
+const NestedScreenA: FunctionComponent<IProps> = ({ componentId }) => {
   const handleOpenNestedScreenBPress = () =>
     Navigation.push(componentId, {
       component: {
@@ -25,11 +31,7 @@ const NestedScreenA = ({ componentId }) => {
   )
 }
 
-export const NESTED_A_SCREEN = {
-  name: 'app.NestedA',
-  title: 'Screen A',
-}
-
+// @ts-ignore
 NestedScreenA.options = () => ({
   topBar: {
     title: {

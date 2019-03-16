@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { ComponentType } from 'react'
 import { Provider } from 'react-redux'
 import store from '../../store'
 
-const withRedux = WrappedComponent => props => (
+const withRedux = (WrappedComponent: ComponentType) => (props: any) => (
   <Provider store={store}>
     <WrappedComponent {...props} />
   </Provider>

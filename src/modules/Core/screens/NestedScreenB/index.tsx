@@ -1,6 +1,6 @@
 import React, {
-  useEffect,
-  useState
+  FunctionComponent,
+  useState,
 } from 'react'
 import { Alert } from 'react-native'
 import { Navigation } from 'react-native-navigation'
@@ -12,6 +12,8 @@ import {
   H1,
   P
 } from '../../../../components/Text'
+import { IProps } from './types'
+import useButtonListener from '../../../../hooks/useButtonListener'
 
 export const NESTED_B_SCREEN = {
   name: 'app.NestedB',
@@ -23,21 +25,16 @@ export const ALERT_BUTTON = {
   text: 'Alert!'
 }
 
-const NestedScreenB = ({
+const NestedScreenB: FunctionComponent<IProps> = ({
   componentId,
 }) => {
 
   const [isTopRightButton, setIsTopRightButton] = useState(false)
-
-  useEffect(() => {
-    Navigation
-      .events()
-      .registerNavigationButtonPressedListener(({ buttonId }) => {
-        if (buttonId === ALERT_BUTTON.id) {
-          Alert.alert('Yay it works!')
-        }
-      })
-  }, [])
+  useButtonListener(({ buttonId }) => {
+    if (buttonId === ALERT_BUTTON.id) {
+      Alert.alert('Yay it works!')
+    }
+  })
 
   const handlePopPress = () => Navigation.popToRoot(componentId)
 
@@ -83,7 +80,7 @@ const NestedScreenB = ({
   )
 }
 
-// TODO: Move inside component?
+// @ts-ignore
 NestedScreenB.options = () => ({
   topBar: {
     title: {

@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { ComponentType } from 'react'
 import { Root } from 'native-base'
 
-const withNativeBaseRoot = WrappedComponent => props => (
+const withNativeBaseRoot = (WrappedComponent: ComponentType) => (props: any) => (
   <Root>
     <WrappedComponent {...props} />
   </Root>

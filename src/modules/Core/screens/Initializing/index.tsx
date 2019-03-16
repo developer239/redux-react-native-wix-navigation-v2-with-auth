@@ -4,29 +4,29 @@ import { Container, Spinner } from '../../../../components'
 import { goToAuthScreen, goToHomeScreen } from '../../../../navigation'
 import { USER_KEY } from '../../../../config'
 
+export const INITIALIZING_SCREEN = {
+  name: 'app.Initializing',
+}
+
 const InitialisingScreen = () => {
   const initializeApp = async () => {
     const user = await AsyncStorage.getItem(USER_KEY)
     if (user) {
-      goToHomeScreen()
+      await goToHomeScreen()
     } else {
-      goToAuthScreen()
+      await goToAuthScreen()
     }
   }
 
   useEffect(() => {
     initializeApp()
-  }, []);
+  }, [])
 
   return (
-    <Container center>
+    <Container isCenter>
       <Spinner />
     </Container>
   )
-}
-
-export const INITIALIZING_SCREEN = {
-  name: 'app.Initializing',
 }
 
 export default InitialisingScreen

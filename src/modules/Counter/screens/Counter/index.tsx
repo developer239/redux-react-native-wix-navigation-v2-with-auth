@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { ComponentType, FunctionComponent } from 'react'
 import { Navigation } from 'react-native-navigation'
-import { compose } from 'ramda'
 import { connect } from 'react-redux'
+import { compose } from 'redux'
 import { withRedux } from '../../../../hocs'
-import { Container, Button } from '../../../../components'
-import { P, H1 } from '../../../../components/Text'
+import {
+  Container,
+  Button,
+} from '../../../../components'
+import {
+  P,
+  H1,
+} from '../../../../components/Text'
 import {
   incrementCounter,
   decrementCounter,
@@ -12,13 +18,15 @@ import {
 } from '../../ducks/actions'
 import { selectCounterValue } from '../../ducks/selectors'
 import { COUNTER_NESTED_SCREEN } from '../CounterNested'
+import { IAppStore } from '../../../../reducer'
+import { IProps } from './types'
 
 export const COUNTER_SCREEN = {
   name: 'app.Counter',
   title: 'Redux Counter',
 }
 
-export const CounterScreen = ({
+export const CounterScreen: FunctionComponent<IProps> = ({
   counterValue,
   dispatchIncrementCounter,
   dispatchDecrementCounter,
@@ -55,7 +63,7 @@ export const CounterScreen = ({
   )
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state: IAppStore) => ({
   counterValue: selectCounterValue(state),
 })
 
@@ -65,17 +73,12 @@ const mapDispatchToProps = {
   dispatchClearCounter: clearCounter,
 }
 
-const enhance = compose(
+const EnhancedCounterScreen = compose(
   withRedux,
-  connect(
-    mapStateToProps,
-    mapDispatchToProps
-  ),
-)
+  connect(mapStateToProps, mapDispatchToProps),
+)(CounterScreen) as ComponentType
 
-const EnhancedCounterScreen = enhance(CounterScreen)
-
-// TODO: Hoist Non React Statics
+// @ts-ignore
 EnhancedCounterScreen.options = () => ({
   topBar: {
     title: {

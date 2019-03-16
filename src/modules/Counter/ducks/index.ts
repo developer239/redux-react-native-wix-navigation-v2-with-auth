@@ -1,10 +1,15 @@
 import * as types from './constants'
+import { ICounterActions } from './actions.types'
+
+export interface ICounterState {
+  value: number
+}
 
 export const initialState = {
   value: 0,
 }
 
-const counterReducer = (state = initialState, action) => {
+const counterReducer = (state: ICounterState = initialState, action: ICounterActions) => {
   const { type } = action
 
   switch (type) {

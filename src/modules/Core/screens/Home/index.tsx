@@ -1,16 +1,31 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import { AsyncStorage } from 'react-native'
 import { Navigation } from 'react-native-navigation'
+import { Toast } from 'native-base'
 import { USER_KEY } from '../../../../config'
 import { Button, Container } from '../../../../components'
 import { H1, P } from '../../../../components/Text'
 import { goToAuthScreen } from '../../../../navigation'
 import { NESTED_A_SCREEN } from '../NestedScreenA'
+import { IProps } from './types'
 
-const HomeScreen = ({ componentId }) => {
+export const HOME_SCREEN = {
+  name: 'app.Home',
+  title: 'Home',
+}
+
+const HomeScreen: FunctionComponent<IProps> = ({ componentId }) => {
   const handleLogOut = async () => {
-    await AsyncStorage.removeItem(USER_KEY)
-    goToAuthScreen()
+    try {
+      await AsyncStorage.removeItem(USER_KEY)
+      await goToAuthScreen()
+    } catch(e) {
+      Toast.show({
+        text: 'Logout failed!',
+        type: 'danger',
+        position: 'top',
+      })
+    }
   }
 
   const handleOpenNestedScreenAPress = () =>
@@ -39,11 +54,7 @@ const HomeScreen = ({ componentId }) => {
   )
 }
 
-export const HOME_SCREEN = {
-  name: 'app.Home',
-  title: 'Home',
-}
-
+// @ts-ignore
 HomeScreen.options = () => ({
   topBar: {
     title: {
