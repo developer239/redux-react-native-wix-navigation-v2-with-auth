@@ -29,13 +29,6 @@ jobs:
           key: node-v1-{{ checksum "package.json" }}-{{ arch }}
           paths:
             - node_modules
-
-      - run:
-          name: Run Test and Coverage
-          command: |
-            ./cc-test-reporter before-build
-            yarn test -- --coverage
-            ./cc-test-reporter after-build --exit-code $?
 workflows:
   version: 2
   node-android-ios:
