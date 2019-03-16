@@ -57,4 +57,22 @@ If you have any problems with building your application, please, look at FAQ sec
 
 ### Possible Build Issues
 
-There are no issues at this moment. If you have problem with any part of installation, please create issue I will try answer your questions.
+Failed to install after successful build on iOS.
+
+
+**Problem:**
+```
+info Installing build/ReactNativeNavigationStarterKit/Build/Products/Debug-iphonesimulator/ReactNativeNavigationStarterKit.app
+An error was encountered processing the command (domain=IXUserPresentableErrorDomain, code=1):
+This app could not be installed at this time.
+```
+
+```
+Underlying error (domain=MIInstallerErrorDomain, code=35):
+    Failed to load Info.plist from bundle at path
+```
+
+**Solution:**
+Run `yarn ios`
+
+If you have any undocumented problems, please, create new issue. I will try answer your questions.
