@@ -9,11 +9,22 @@
     "lint:ts": "node node_modules/.bin/tslint src/**/*.ts{,x}",
     "lint:css": "node node_modules/.bin/stylelint ./src"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.ts{,x}": [
+      "node node_modules/.bin/tslint src/**/*.ts{,x} --fix",
+      "prettier --write",
+      "git add"
+    ]
+  },
   "dependencies": {
     "@react-native-community/async-storage": "^1.2.1",
     "formik": "^1.5.1",
     "native-base": "^2.12.1",
-    "ramda": "^0.26.1",
     "react": "16.8.3",
     "react-native": "0.59.1",
     "react-native-navigation": "^2.13.1",
@@ -37,7 +48,9 @@
     "@types/styled-components": "^4.1.12",
     "@types/yup": "^0.26.12",
     "babel-jest": "^24.5.0",
+    "husky": "^1.3.1",
     "jest": "^24.5.0",
+    "lint-staged": "^8.1.5",
     "metro-react-native-babel-preset": "^0.53.1",
     "prettier": "^1.16.4",
     "react-test-renderer": "^16.8.4",
