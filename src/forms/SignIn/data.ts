@@ -8,6 +8,7 @@ export const getValidationSchema = () =>
     email: Yup.string().required('email is required'),
   })
 
-// TODO: Use formik components in order to remove this mess
-export const isError = (id: string) => (touched: any, errors: any) => Boolean(touched[id] && errors[id])
+export const isError = (id: string) => (touched: any, errors: any) =>
+  Boolean(touched[id] && errors[id])
+
 export const isEmailError = isError('email')

@@ -1,15 +1,12 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import { Icon } from 'native-base'
 import { Formik } from 'formik'
 import { Button, Form, FormItem, Input } from '../../components'
 import { Hint } from './styled'
-import {
-  getValidationSchema,
-  initialValues,
-  isEmailError
-} from './data'
+import { getValidationSchema, initialValues, isEmailError } from './data'
+import { IProps } from './types'
 
-const SignInForm = ({ onSubmit }) => (
+const SignInForm: FunctionComponent<IProps> = ({ onSubmit }) => (
   <Formik
     initialValues={initialValues}
     validationSchema={getValidationSchema}
