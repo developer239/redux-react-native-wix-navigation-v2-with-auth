@@ -39,7 +39,7 @@
     "@strv/stylelint-config-styled-components": "1.1.0",
     "@types/jest": "24.0.15",
     "@types/ramda": "0.26.13",
-    "@types/react": "16.8.22",
+    "@types/react": "16.8.23",
     "@types/react-native": "0.57.65",
     "@types/react-native-navigation": "2.0.0",
     "@types/react-redux": "7.1.1",
