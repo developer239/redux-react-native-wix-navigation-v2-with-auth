@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.5.0",
-    "@babel/runtime": "7.4.5",
+    "@babel/runtime": "7.5.0",
     "@strv/stylelint-config-styled-components": "1.1.0",
     "@types/jest": "24.0.15",
     "@types/ramda": "0.26.13",
