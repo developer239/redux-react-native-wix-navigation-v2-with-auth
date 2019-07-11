@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@react-native-community/async-storage": "1.5.0",
-    "formik": "1.5.7",
+    "formik": "1.5.8",
     "native-base": "2.12.1",
     "react": "16.8.6",
     "react-native": "0.59.9",
