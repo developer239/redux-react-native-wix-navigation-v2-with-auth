@@ -47,7 +47,7 @@
     "@types/styled-components": "4.1.16",
     "@types/yup": "0.26.19",
     "babel-jest": "24.8.0",
-    "husky": "3.0.0",
+    "husky": "3.0.1",
     "jest": "24.8.0",
     "lint-staged": "8.2.1",
     "metro-react-native-babel-preset": "0.55.0",
