@@ -52,7 +52,7 @@
     "lint-staged": "8.2.1",
     "metro-react-native-babel-preset": "0.55.0",
     "prettier": "1.18.2",
-    "react-test-renderer": "16.8.6",
+    "react-test-renderer": "16.9.0",
     "stylelint": "10.1.0",
     "tslint": "5.18.0",
     "tslint-config-prettier": "1.18.0",
