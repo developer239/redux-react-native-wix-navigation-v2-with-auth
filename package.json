@@ -42,7 +42,7 @@
     "@types/react": "16.8.22",
     "@types/react-native": "0.57.65",
     "@types/react-native-navigation": "2.0.0",
-    "@types/react-redux": "7.1.1",
+    "@types/react-redux": "7.1.2",
     "@types/react-test-renderer": "16.8.2",
     "@types/styled-components": "4.1.16",
     "@types/yup": "0.26.19",
