@@ -18,6 +18,21 @@ jobs:
         with:
           node-version: 12
 
+      - name: Cache node modules
+        uses: actions/cache@v1
+        id: cache
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Rebuild detox
+        if: steps.cache.outputs.cache-hit == 'true'
+        run: yarn detox clean-framework-cache && yarn detox build-framework-cache
+
+      - name: Install Dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: yarn install
+
       - name: Use specific Java version for sdkmanager to work
         uses: joschi/setup-jdk@v1
         with:
@@ -30,13 +45,9 @@ jobs:
           echo "no" | $ANDROID_HOME/tools/bin/avdmanager create avd --force --name emu --device "Nexus 5X" -k 'system-images;android-29;google_apis;x86'
           $ANDROID_HOME/emulator/emulator -list-avds
 
-      - name: Install node_modules
-        run: |
-          yarn install --frozen-lockfile
-
       - name: Build for detox
         run: |
-          yarn build-detox-android
+          yarn detox:build:android
 
       - name: Android Emulator
         timeout-minutes: 10
@@ -49,4 +60,4 @@ jobs:
           echo "Emulator started"
 
       - name: Android Detox
-        run: yarn start & yarn test-detox-android
+        run: yarn start & yarn detox:test:android

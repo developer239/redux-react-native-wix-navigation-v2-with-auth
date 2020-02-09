@@ -14,9 +14,10 @@
     "format": "prettier --write '*/**/*.{ts,tsx,css,md,json}'",
     "lint:css": "stylelint '**/*.{ts,tsx}'",
     "lint:ts": "eslint --ext .ts,.tsx src",
-    "build-detox-android": "detox build -c android.emu.debug",
-    "test-detox-android": "detox test -c android.emu.debug"
-
+    "detox:build:ios": "detox build e2e --configuration ios.sim.release",
+    "detox:test:ios": "detox test e2e --configuration ios.sim.release --cleanup --debug-synchronization 200",
+    "detox:build:android": "detox build -c android.emu.debug",
+    "detox:test:android": "detox test -c android.emu.debug"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.7.1",
