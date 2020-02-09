@@ -5,6 +5,7 @@ import { INITIALIZING_SCREEN } from './modules/Core/screens/Initializing'
 registerScreens()
 
 Navigation.events().registerAppLaunchedListener(() => {
+  // eslint-disable-next-line @typescript-eslint/no-floating-promises
   Navigation.setRoot({
     root: {
       component: {

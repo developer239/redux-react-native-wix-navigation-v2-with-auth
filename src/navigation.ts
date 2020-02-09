@@ -1,26 +1,24 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 import { registerScreen, setRoot } from './services/navigation'
-import Home, { HOME_SCREEN } from './modules/Core/screens/Home'
-import Counter, { COUNTER_SCREEN } from './modules/Counter/screens/Counter'
-import CounterNested, {
-  COUNTER_NESTED_SCREEN,
-} from './modules/Counter/screens/CounterNested'
-import Initializing, {
+import { HomeScreen, HOME_SCREEN } from './modules/Core/screens/Home'
+import {
+  InitializingScreen,
   INITIALIZING_SCREEN,
 } from './modules/Core/screens/Initializing'
-import NestedScreenA, {
+import {
+  NestedScreenA,
   NESTED_A_SCREEN,
 } from './modules/Core/screens/NestedScreenA'
-import NestedScreenB, {
+import {
+  NestedScreenB,
   NESTED_B_SCREEN,
 } from './modules/Core/screens/NestedScreenB'
-import SignIn, { SIGN_IN_SCREEN } from './modules/Core/screens/SignIn'
+import { SignInScreen, SIGN_IN_SCREEN } from './modules/Core/screens/SignIn'
 
 export const registerScreens = () => {
-  registerScreen(HOME_SCREEN.name, Home)
-  registerScreen(COUNTER_SCREEN.name, Counter)
-  registerScreen(COUNTER_NESTED_SCREEN.name, CounterNested)
-  registerScreen(INITIALIZING_SCREEN.name, Initializing)
-  registerScreen(SIGN_IN_SCREEN.name, SignIn)
+  registerScreen(HOME_SCREEN.name, HomeScreen)
+  registerScreen(INITIALIZING_SCREEN.name, InitializingScreen)
+  registerScreen(SIGN_IN_SCREEN.name, SignInScreen)
   registerScreen(NESTED_A_SCREEN.name, NestedScreenA)
   registerScreen(NESTED_B_SCREEN.name, NestedScreenB)
 }
@@ -47,24 +45,6 @@ export const goToHomeScreen = () =>
                   fontSize: 14,
                   text: 'Home',
                   icon: require('./static/images/home.png'),
-                },
-              },
-            },
-          },
-        ],
-      },
-    },
-    {
-      stack: {
-        children: [
-          {
-            component: {
-              name: COUNTER_SCREEN.name,
-              options: {
-                bottomTab: {
-                  fontSize: 14,
-                  text: 'Counter',
-                  icon: require('./static/images/counter.png'),
                 },
               },
             },

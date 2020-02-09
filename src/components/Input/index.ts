@@ -1,3 +1,1 @@
-import { Input } from 'native-base'
-
-export default Input
+export { Input } from 'native-base'
