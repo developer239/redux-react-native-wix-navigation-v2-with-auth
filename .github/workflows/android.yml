@@ -1,4 +1,4 @@
-name: AndroidDetox
+name: android
 
 on: [push]
 
@@ -34,7 +34,7 @@ jobs:
 
       - name: Build for detox
         run: |
-          yarn build-detox-android
+          yarn detox:android:build
 
       - name: Android Emulator
         timeout-minutes: 10
@@ -47,4 +47,4 @@ jobs:
           echo "Emulator started"
 
       - name: Android Detox
-        run: yarn start & yarn test-detox-android
+        run: yarn start & yarn detox:android

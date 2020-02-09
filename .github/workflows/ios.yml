@@ -1,4 +1,4 @@
-name: iOSDetox
+name: ios
 
 on: [push]
 
@@ -41,7 +41,11 @@ jobs:
         run: |
           gem update cocoapods xcodeproj
           cd ios && pod install && cd ..
+
       - run: brew tap wix/brew
+
       - run: brew install applesimutils
+
       - run: yarn detox:ios:build
-      - run: yarn detox:ios test --cleanup --debug-synchronization 200
+
+      - run: yarn detox:ios --cleanup --debug-synchronization 200
