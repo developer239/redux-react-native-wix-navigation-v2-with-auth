@@ -5,10 +5,6 @@
 
 The core code of this application was generated automatically by [create-opinionated-app](https://github.com/developer239/create-opinionated-app).
 
-### Authorization
-
-This app contains simple example how to navigate between public and secured application and how to keep user logged in.
-
 ### Preview
 
 ![1](https://github.com/developer239/redux-react-native-wix-navigation-v2-with-auth/blob/master/preview.gif?raw=true)
@@ -60,7 +56,7 @@ You can find config files for these hand-crafted [code quality resources here](h
 - [x] [CommitLint](https://github.com/conventional-changelog/commitlint)
 - [x] [LintStaged](https://github.com/okonet/lint-staged)
 
-## Code Quality Tools
+## Testing
 
 - [x] [Jest](https://github.com/facebook/jest) for simple unit and integration tests
 - [x] [Detox](https://github.com/wix/Detox) for E2E tests
