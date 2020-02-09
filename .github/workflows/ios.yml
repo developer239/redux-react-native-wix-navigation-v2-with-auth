@@ -4,16 +4,22 @@ on: [push]
 
 jobs:
   build:
-    runs-on: macOS-latest
+    runs-on: macos-latest
     timeout-minutes: 15
 
     env:
       DEVELOPER_DIR: /Applications/Xcode_11.2.app
+
     steps:
-      - uses: actions/checkout@master
-      - uses: actions/setup-node@master
+      - name: Checkout
+        uses: actions/checkout@v1
         with:
-          node-version: '12.0.0'
+          fetch-depth: 1
+
+      - name: Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
 
       - name: Cache node modules
         uses: actions/cache@v1
@@ -24,7 +30,7 @@ jobs:
 
       - name: Rebuild detox
         if: steps.cache.outputs.cache-hit == 'true'
-        run: yarn detox-setup
+        run: yarn detox clean-framework-cache && yarn detox build-framework-cache
 
       - name: Install Dependencies
         if: steps.cache.outputs.cache-hit != 'true'
@@ -43,9 +49,8 @@ jobs:
           cd ios && pod install && cd ..
 
       - run: brew tap wix/brew
-
       - run: brew install applesimutils
 
-      - run: yarn detox:ios:build e2e
+      - run: yarn detox build e2e --configuration ios.sim.release
 
-      - run: yarn detox:ios e2e --cleanup --debug-synchronization 200
+      - run: yarn detox test e2e --configuration ios.sim.release --cleanup --debug-synchronization 200

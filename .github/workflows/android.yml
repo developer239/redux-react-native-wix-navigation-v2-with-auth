@@ -5,6 +5,7 @@ on: [push]
 jobs:
   build:
     runs-on: macos-latest
+    timeout-minutes: 15
 
     steps:
       - name: Checkout
@@ -15,7 +16,7 @@ jobs:
       - name: Node
         uses: actions/setup-node@v1
         with:
-          node-version: '12.0.0'
+          node-version: 12
 
       - name: Use specific Java version for sdkmanager to work
         uses: joschi/setup-jdk@v1
@@ -35,7 +36,7 @@ jobs:
 
       - name: Build for detox
         run: |
-          yarn detox:android:build
+          yarn build-detox-android
 
       - name: Android Emulator
         timeout-minutes: 10
@@ -48,4 +49,4 @@ jobs:
           echo "Emulator started"
 
       - name: Android Detox
-        run: yarn start & yarn detox:android
+        run: yarn start & yarn test-detox-android
