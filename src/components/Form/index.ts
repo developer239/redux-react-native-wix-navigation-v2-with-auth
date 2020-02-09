@@ -1,6 +1,6 @@
-import { Form } from 'native-base'
+import { Form as NativeBaseForm } from 'native-base'
 import styled from 'styled-components/native'
 
-export default styled(Form)`
+export const Form = styled(NativeBaseForm)`
   width: 100%;
 `

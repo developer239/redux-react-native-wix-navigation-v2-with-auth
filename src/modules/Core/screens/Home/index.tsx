@@ -4,7 +4,7 @@ import { Navigation } from 'react-native-navigation'
 import { Toast } from 'native-base'
 import { USER_KEY } from '../../../../config'
 import { Button, Container } from '../../../../components'
-import { H1, P } from '../../../../components/Text'
+import { H1, Paragraph } from '../../../../components/Text'
 import { goToAuthScreen } from '../../../../navigation'
 import { NESTED_A_SCREEN } from '../NestedScreenA'
 import { IProps } from './types'
@@ -14,12 +14,12 @@ export const HOME_SCREEN = {
   title: 'Home',
 }
 
-const HomeScreen: FunctionComponent<IProps> = ({ componentId }) => {
+export const HomeScreen: FunctionComponent<IProps> = ({ componentId }) => {
   const handleLogOut = async () => {
     try {
       await AsyncStorage.removeItem(USER_KEY)
       await goToAuthScreen()
-    } catch (e) {
+    } catch (error) {
       Toast.show({
         text: 'Logout failed!',
         type: 'danger',
@@ -38,22 +38,23 @@ const HomeScreen: FunctionComponent<IProps> = ({ componentId }) => {
   return (
     <Container marginHorizontal={20} marginVertical={20}>
       <H1>Home Screen</H1>
-      <P>
+      <Paragraph>
         With React Native Navigation it is easy to make native transitions
         between screens.
-      </P>
+      </Paragraph>
       <Button onPress={handleOpenNestedScreenAPress} block>
         Open Nested Screen A
       </Button>
-      <P>
+      <Paragraph>
         You will be signed in until you sign out. Press the button below if you
         want to change user profile.
-      </P>
+      </Paragraph>
       <Button onPress={handleLogOut}>Sign Out</Button>
     </Container>
   )
 }
 
+// TODO: https://github.com/mridgway/hoist-non-react-statics
 // @ts-ignore
 HomeScreen.options = () => ({
   topBar: {
@@ -62,5 +63,3 @@ HomeScreen.options = () => ({
     },
   },
 })
-
-export default HomeScreen

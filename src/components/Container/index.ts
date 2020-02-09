@@ -7,7 +7,7 @@ interface IProps {
   marginVertical?: number
 }
 
-export default styled.View<IProps>`
+export const Container = styled.View<IProps>`
   flex: 1;
   ${is('isCenter')`
     align-items: center;

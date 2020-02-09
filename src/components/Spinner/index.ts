@@ -1,3 +1,1 @@
-import { Spinner } from 'native-base'
-
-export default Spinner
+export { Spinner } from 'native-base'
