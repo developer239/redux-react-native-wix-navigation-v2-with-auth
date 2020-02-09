@@ -13,7 +13,8 @@
     "detox:android:build": "detox build -c android.emu.release",
     "format": "prettier --write '*/**/*.{ts,tsx,css,md,json}'",
     "lint:css": "stylelint '**/*.{ts,tsx}'",
-    "lint:ts": "eslint --ext .ts,.tsx src"
+    "lint:ts": "eslint --ext .ts,.tsx src",
+    "detox-setup": "detox clean-framework-cache && detox build-framework-cache"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.7.1",
