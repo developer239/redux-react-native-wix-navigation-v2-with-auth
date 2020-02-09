@@ -46,6 +46,6 @@ jobs:
 
       - run: brew install applesimutils
 
-      - run: yarn detox:ios:build
+      - run: yarn detox:ios:build e2e
 
-      - run: yarn detox:ios --cleanup --debug-synchronization 200
+      - run: yarn detox:ios e2e --cleanup --debug-synchronization 200
