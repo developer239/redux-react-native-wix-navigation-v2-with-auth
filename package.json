@@ -1,0 +1,85 @@
+{
+  "name": "examplewixapp",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "react-native start --reset-cache",
+    "test": "jest",
+    "start:android": "react-native run-android",
+    "start:ios": "react-native run-ios",
+    "detox:ios": "detox test -c ios.sim.debug",
+    "detox:ios:build": "detox build -c ios.sim.debug",
+    "detox:android": "detox test -c android.emu.release",
+    "detox:android:build": "detox build -c android.emu.release",
+    "format": "prettier --write '*/**/*.{ts,tsx,css,md,json}'",
+    "lint:css": "stylelint '**/*.{ts,tsx}'",
+    "lint:ts": "eslint --ext .ts,.tsx src"
+  },
+  "dependencies": {
+    "react": "16.9.0",
+    "react-native": "0.61.5",
+    "react-native-config": "^0.12.0",
+    "react-native-navigation": "4.4.0",
+    "styled-components": "^5.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/runtime": "^7.8.4",
+    "@code-quality/commitlint-config": "^1.1.0",
+    "@code-quality/eslint-config-jest": "^1.1.0",
+    "@code-quality/eslint-config-react-native": "^1.2.2",
+    "@code-quality/eslint-config-typescript": "^1.6.0",
+    "@code-quality/prettier-config": "^2.1.0",
+    "@code-quality/stylelint-styled-components-react-native-config": "^1.1.0",
+    "@commitlint/cli": "^8.3.5",
+    "@react-native-community/eslint-config": "^0.0.7",
+    "@testing-library/react-native": "^5.0.3",
+    "@types/detox": "^14.5.2",
+    "@types/jest": "^25.1.2",
+    "@types/node": "^13.7.0",
+    "@types/react": "^16.9.19",
+    "@types/react-native": "^0.61.12",
+    "@types/react-test-renderer": "^16.9.2",
+    "@types/styled-components": "^4.4.2",
+    "babel-jest": "^25.1.0",
+    "babel-plugin-inline-import": "^3.0.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "detox": "15.1.4",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "husky": "^4.2.1",
+    "jest": "^25.1.0",
+    "lint-staged": "^10.0.7",
+    "metro-react-native-babel-preset": "^0.58.0",
+    "prettier": "^1.19.1",
+    "react-test-renderer": "^16.12.0",
+    "stylelint": "^13.1.0",
+    "stylelint-config-prettier": "^8.0.1",
+    "typescript": "^3.7.5"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "detox": {
+    "configurations": {
+      "ios.sim.debug": {
+        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/examplewixapp.app",
+        "build": "xcodebuild -workspace ios/examplewixapp.xcworkspace -scheme examplewixapp -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+        "type": "ios.simulator",
+        "device": {
+          "type": "iPhone 11 Pro"
+        }
+      },
+      "android.emu.release": {
+        "binaryPath": "android/app/build/outputs/apk/release/app-release.apk",
+        "build": "cd android && ./gradlew assembleRelease assembleAndroidTest -DtestBuildType=release && cd ..",
+        "type": "android.emulator",
+        "device": {
+          "avdName": "Nexus_5X_API_26"
+        }
+      }
+    },
+    "test-runner": "jest"
+  }
+}
