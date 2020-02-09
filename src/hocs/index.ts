@@ -1,3 +1,1 @@
-import withNativeBaseRoot from './withNativeBaseRoot'
-
-export { withNativeBaseRoot }
+export { withNativeBaseRoot } from './withNativeBaseRoot'
