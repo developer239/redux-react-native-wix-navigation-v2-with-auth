@@ -21,6 +21,7 @@ Before running the application make sure that you have following dependencies se
 2. [detox](https://github.com/wix/Detox/blob/master/docs/Introduction.GettingStarted.md) [optional]
 3. `yarn install`
 4. `cd ios && pod install && cd ..`
+5. `react-native link` (in order to link `native-base` assets)
 
 If you have any problems with building your application, please, look at FAQ section of this README or create an issue on GitHub.
 
