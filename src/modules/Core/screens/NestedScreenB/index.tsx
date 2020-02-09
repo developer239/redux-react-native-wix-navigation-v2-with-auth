@@ -1,19 +1,10 @@
-import React, {
-  FunctionComponent,
-  useState,
-} from 'react'
+import React, { FunctionComponent, useState } from 'react'
 import { Alert } from 'react-native'
 import { Navigation } from 'react-native-navigation'
-import {
-  Button,
-  Container
-} from '../../../../components'
-import {
-  H1,
-  P
-} from '../../../../components/Text'
+import { Button, Container } from '../../../../components'
+import { H1, Paragraph } from '../../../../components/Text'
+import { useButtonListener } from '../../../../hooks/useButtonListener'
 import { IProps } from './types'
-import useButtonListener from '../../../../hooks/useButtonListener'
 
 export const NESTED_B_SCREEN = {
   name: 'app.NestedB',
@@ -22,13 +13,10 @@ export const NESTED_B_SCREEN = {
 
 export const ALERT_BUTTON = {
   id: `${NESTED_B_SCREEN.name}.alertButton`,
-  text: 'Alert!'
+  text: 'Alert!',
 }
 
-const NestedScreenB: FunctionComponent<IProps> = ({
-  componentId,
-}) => {
-
+export const NestedScreenB: FunctionComponent<IProps> = ({ componentId }) => {
   const [isTopRightButton, setIsTopRightButton] = useState(false)
   useButtonListener(({ buttonId }) => {
     if (buttonId === ALERT_BUTTON.id) {
@@ -59,18 +47,22 @@ const NestedScreenB: FunctionComponent<IProps> = ({
   return (
     <Container marginHorizontal={20} marginVertical={20}>
       <H1>Screen B</H1>
-      <P>
+      <Paragraph>
         You hit the end of the road. You can press the top left button to get to
         the previous screen.
-      </P>
-      <P>On IOS you can also swipe from left to right to close this screen.</P>
-      <P>Press the button below to go directly to the home screen.</P>
+      </Paragraph>
+      <Paragraph>
+        On IOS you can also swipe from left to right to close this screen.
+      </Paragraph>
+      <Paragraph>
+        Press the button below to go directly to the home screen.
+      </Paragraph>
       <Button onPress={handlePopPress}>Pop</Button>
-      <P>
+      <Paragraph>
         Wix Navigation could be hard to understand at first, but it allows you
         to do many different things. For example, dynamically set navigation
         buttons.
-      </P>
+      </Paragraph>
       {isTopRightButton ? (
         <Button onPress={handleHideAlertButton}>HIDE Top Right Button</Button>
       ) : (
@@ -80,6 +72,7 @@ const NestedScreenB: FunctionComponent<IProps> = ({
   )
 }
 
+// TODO: https://github.com/mridgway/hoist-non-react-statics
 // @ts-ignore
 NestedScreenB.options = () => ({
   topBar: {
@@ -88,5 +81,3 @@ NestedScreenB.options = () => ({
     },
   },
 })
-
-export default NestedScreenB

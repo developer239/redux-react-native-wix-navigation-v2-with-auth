@@ -1,4 +1,4 @@
-import { FormikActions } from 'formik'
+import { FormikHelpers } from 'formik'
 
 export interface ISignInFormValues {
   email: string
@@ -8,6 +8,6 @@ export interface ISignInFormValues {
 export interface IProps {
   onSubmit: (
     values: ISignInFormValues,
-    formikActions: FormikActions<ISignInFormValues>
+    FormikHelpers: FormikHelpers<ISignInFormValues>
   ) => void
 }

@@ -6,7 +6,9 @@ import { Hint } from './styled'
 import { getValidationSchema, initialValues, isEmailError } from './data'
 import { IProps } from './types'
 
-const SignInForm: FunctionComponent<IProps> = ({ onSubmit }) => (
+export const SIGN_IN_FORM_TEST_ID = 'testId/sign-in-form'
+
+export const SignInForm: FunctionComponent<IProps> = ({ onSubmit }) => (
   <Formik
     initialValues={initialValues}
     validationSchema={getValidationSchema}
@@ -20,7 +22,7 @@ const SignInForm: FunctionComponent<IProps> = ({ onSubmit }) => (
       touched,
       errors,
     }) => (
-      <Form>
+      <Form testID={SIGN_IN_FORM_TEST_ID}>
         <FormItem error={isEmailError(touched, errors)}>
           <Input
             placeholder="Email"
@@ -49,5 +51,3 @@ const SignInForm: FunctionComponent<IProps> = ({ onSubmit }) => (
     )}
   </Formik>
 )
-
-export default SignInForm

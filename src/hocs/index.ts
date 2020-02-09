@@ -1,7 +1,1 @@
-import withNativeBaseRoot from './withNativeBaseRoot'
-import withRedux from './withRedux'
-
-export {
-  withNativeBaseRoot,
-  withRedux,
-}
+export { withNativeBaseRoot } from './withNativeBaseRoot'

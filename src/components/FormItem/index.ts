@@ -1,6 +1,6 @@
 import { Item } from 'native-base'
 import styled from 'styled-components'
 
-export default styled(Item)`
+export const FormItem = styled(Item)`
   margin-bottom: 10px;
 `

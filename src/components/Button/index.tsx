@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react'
 import { NativeBase, Text } from 'native-base'
 import { StyledButton } from './styled'
 
-const ButtonComponent: FunctionComponent<NativeBase.Button> = ({
+export const Button: FunctionComponent<NativeBase.Button> = ({
   children,
   ...props
 }) => (
@@ -10,5 +10,3 @@ const ButtonComponent: FunctionComponent<NativeBase.Button> = ({
     <Text>{children}</Text>
   </StyledButton>
 )
-
-export default ButtonComponent

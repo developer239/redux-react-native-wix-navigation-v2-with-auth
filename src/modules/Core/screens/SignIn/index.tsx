@@ -1,24 +1,24 @@
 import React from 'react'
 import AsyncStorage from '@react-native-community/async-storage'
 import { Toast } from 'native-base'
-import wait from '../../../../services/wait'
+import { FormikHelpers } from 'formik'
+import { wait } from '../../../../services/wait'
 import { Container } from '../../../../components'
 import { H1 } from '../../../../components/Text'
 import { withNativeBaseRoot } from '../../../../hocs'
-import SignInForm from '../../../../forms/SignIn'
+import { SignInForm } from '../../../../forms/SignIn'
 import { goToHomeScreen } from '../../../../navigation'
 import { USER_KEY } from '../../../../config'
 import { ISignInFormValues } from '../../../../forms/SignIn/types'
-import { FormikActions } from 'formik'
 
 export const SIGN_IN_SCREEN = {
   name: 'app.SignIn',
 }
 
-const SignInScreen = () => {
+const SignInScreenComponent = () => {
   const handleSubmit = async (
     { email, password }: ISignInFormValues,
-    { resetForm }: FormikActions<ISignInFormValues>
+    { resetForm }: FormikHelpers<ISignInFormValues>
   ) => {
     // Fake server response delay
     await wait(1000)
@@ -44,13 +44,12 @@ const SignInScreen = () => {
   )
 }
 
-const EnhancedSignInScreen = withNativeBaseRoot(SignInScreen)
+export const SignInScreen = withNativeBaseRoot(SignInScreenComponent)
 
+// TODO: https://github.com/mridgway/hoist-non-react-statics
 // @ts-ignore
-EnhancedSignInScreen.options = () => ({
+SignInScreen.options = () => ({
   topBar: {
     visible: false,
   },
 })
-
-export default EnhancedSignInScreen

@@ -1,78 +1,68 @@
-[![CircleCI](https://circleci.com/gh/developer239/redux-react-native-wix-navigation-v2-with-auth.svg?style=svg)](https://circleci.com/gh/developer239/redux-react-native-wix-navigation-v2-with-auth)
+[![Actions Status](https://github.com/developer239/redux-react-native-wix-navigation-v2-with-auth/workflows/ios/badge.svg)](https://github.com/developer239/redux-react-native-wix-navigation-v2-with-auth/actions?query=workflow%3Aios)
+[![Actions Status](https://github.com/developer239/redux-react-native-wix-navigation-v2-with-auth/workflows/android/badge.svg)](https://github.com/developer239/redux-react-native-wix-navigation-v2-with-auth/actions?query=workflow%3Aandroid)
 [![Maintainability](https://api.codeclimate.com/v1/badges/1300f5103979d206a12b/maintainability)](https://codeclimate.com/github/developer239/redux-react-native-wix-navigation-v2-with-auth/maintainability)
-[![Greenkeeper badge](https://badges.greenkeeper.io/developer239/redux-react-native-wix-navigation-v2-with-auth.svg)](https://greenkeeper.io/)
 [![TypeScript](https://badges.frapsoft.com/typescript/version/typescript-next.svg?v=101)](https://www.typescriptlang.org/)
 
 ## Redux React Native Wix Navigation v2 with Auth
 
-### Authorization
-
-All I wanted to show, is how to navigate between public and secured application and how to keep a user logged in.
+The core code of this application was generated automatically by [create-opinionated-app](https://github.com/developer239/create-opinionated-app).
 
 ### Preview
 
 ![1](https://github.com/developer239/redux-react-native-wix-navigation-v2-with-auth/blob/master/preview.gif?raw=true)
 
-### Data Flow
-
-I only included redux. Most projects will be fine with [redux-thunk](https://github.com/gaearon/redux-thunk). If you are more advanced developer, then you probably want to install either [redux-observables](https://github.com/redux-observable/redux-observable) or [redux-sagas](https://github.com/redux-saga/redux-saga). redux-observables are the cool thing to use but working with redux-sagas is much easier.
-
 ## Installation
 
-Official installation guide is [here](https://facebook.github.io/react-native/docs/getting-started.html).
+Before running the application make sure that you have following dependencies set up:
 
-The rest of the process is straightforward.
-
-1.  Install node_modules: `yarn install`
-2.  Link native libraries: `react-native link`
+1. [react-native](https://facebook.github.io/react-native/docs/getting-started)
+2. [detox](https://github.com/wix/Detox/blob/master/docs/Introduction.GettingStarted.md) [optional]
+3. `yarn install`
+4. `cd ios && pod install && cd ..`
 
 If you have any problems with building your application, please, look at FAQ section of this README or create an issue on GitHub.
 
-## Development
+### Development
 
-- `yarn start` starts react native server with js bundle
-- `yarn ios` builds project for IOS
-- `yarn android` builds project for Android
-- `yarn lint:ts` runs eslint
-- `yarn lint:css` runs stylelint
+1. Start javascript bundler: `yarn start`
+2. Run iOS: `yarn start:ios`
+3. Run android: `yarn start:android`
+
+### Useful Commands
+
+1. `yarn test` runs jest
+2. `yarn detox:ios:build` builds iOS project for detox
+3. `yarn detox:ios` run detox on iOS
+4. `yarn detox:android:build` builds Android project for detox
+4. `yarn detox:android` run detox on Android
 
 ## Main Dependencies
 
+- ![TS](https://github.com/developer239/create-opinionated-app/blob/master/typescript.svg) Strong [types](https://www.typescriptlang.org) 
 - [React](https://github.com/facebook/react)
 - [React Native](https://github.com/facebook/react-native)
-- [Styled Components](https://github.com/styled-components/styled-components)
-- [Wix React Native Navigation](https://github.com/wix/react-native-navigation)
+- 💅 [Styled Components](https://github.com/styled-components/styled-components)
+- [Wix Navigation](https://github.com/wix/react-native-navigation)
 - [Formik](https://github.com/jaredpalmer/formik)
 - [Yup](https://github.com/jquense/yup)
-- [Redux](http://redux.js.org)
 
 ## Code Quality Tools
 
-- [tslint](https://palantir.github.io/tslint)
-- [stylelint](https://github.com/stylelint/stylelint)
-- [prettier](https://github.com/prettier/prettier)
-- [.editorconfig](http://editorconfig.org/)
+You can find config files for these hand-crafted [code quality resources here](https://github.com/code-quality-resources). ❤
+
+- [x] [Eslint](https://github.com/eslint/eslint) and [Stylelint](https://stylelint.io/)
+- [x] [Prettier](https://prettier.io)
+- [x] [BrowserList](https://github.com/browserslist/browserslist)
+- [x] [EditorConfig](https://editorconfig.org/)
+- [x] 🐶 [Husky](https://github.com/typicode/husky)
+- [x] [CommitLint](https://github.com/conventional-changelog/commitlint)
+- [x] [LintStaged](https://github.com/okonet/lint-staged)
+
+## Testing
+
+- [x] [Jest](https://github.com/facebook/jest) for simple unit and integration tests
+- [x] [Detox](https://github.com/wix/Detox) for E2E tests
 
 ## FAQ
 
-### Possible Build Issues
-
-Failed to install after successful build on iOS.
-
-
-**Problem:**
-```
-info Installing build/ReactNativeNavigationStarterKit/Build/Products/Debug-iphonesimulator/ReactNativeNavigationStarterKit.app
-An error was encountered processing the command (domain=IXUserPresentableErrorDomain, code=1):
-This app could not be installed at this time.
-```
-
-```
-Underlying error (domain=MIInstallerErrorDomain, code=35):
-    Failed to load Info.plist from bundle at path
-```
-
-**Solution:**
-Run `yarn ios` again 😅
-
-If you have any undocumented problems, please, create new issue. I will be happy answer your questions.
+There are not any known issues. If your application is not working for some reason, please, create an issue. 🙏 
