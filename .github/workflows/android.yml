@@ -29,9 +29,6 @@ jobs:
           echo "no" | $ANDROID_HOME/tools/bin/avdmanager create avd --force --name emu --device "Nexus 5X" -k 'system-images;android-29;google_apis;x86'
           $ANDROID_HOME/emulator/emulator -list-avds
 
-      - name: List Available Emulators
-        run: avdmanager list avd
-
       - name: Install node_modules
         run: |
           yarn install --frozen-lockfile
