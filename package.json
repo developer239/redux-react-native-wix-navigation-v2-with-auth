@@ -80,8 +80,8 @@
         "name": "emu"
       },
       "ios.sim.release": {
-        "binaryPath": "ios/build/Build/Products/Release-iphonesimulator/RNDetoxGa.app",
-        "build": "xcodebuild -workspace ios/RNDetoxGa.xcworkspace -scheme RNDetoxGa -configuration Release -sdk iphonesimulator -derivedDataPath ios/build",
+        "binaryPath": "ios/build/Build/Products/Release-iphonesimulator/examplewixapp.app",
+        "build": "xcodebuild -workspace ios/examplewixapp.xcworkspace -scheme examplewixapp -configuration Release -sdk iphonesimulator -derivedDataPath ios/build",
         "type": "ios.simulator",
         "name": "iPhone 8"
       }
