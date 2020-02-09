@@ -10,6 +10,8 @@ update_configs:
           dependency_name: "react-native-navigation"
       - match:
           dependency_name: "@types/react-native"
+      - match:
+          dependency_name: "detox"
     automerged_updates:
       - match:
           dependency_type: "all"
