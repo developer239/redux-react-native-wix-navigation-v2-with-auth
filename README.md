@@ -1,5 +1,6 @@
 [![Actions Status](https://github.com/developer239/redux-react-native-wix-navigation-v2-with-auth/workflows/ios/badge.svg)](https://github.com/developer239/redux-react-native-wix-navigation-v2-with-auth/actions?query=workflow%3Aios)
 [![Actions Status](https://github.com/developer239/redux-react-native-wix-navigation-v2-with-auth/workflows/android/badge.svg)](https://github.com/developer239/redux-react-native-wix-navigation-v2-with-auth/actions?query=workflow%3Aandroid)
+[![Dependabot](https://badgen.net/dependabot/developer239/redux-react-native-wix-navigation-v2-with-auth/103679433?icon=dependabot)](https://dependabot.com/)
 [![Maintainability](https://api.codeclimate.com/v1/badges/1300f5103979d206a12b/maintainability)](https://codeclimate.com/github/developer239/redux-react-native-wix-navigation-v2-with-auth/maintainability)
 [![TypeScript](https://badges.frapsoft.com/typescript/version/typescript-next.svg?v=101)](https://www.typescriptlang.org/)
 
