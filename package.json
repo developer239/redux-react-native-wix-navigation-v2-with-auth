@@ -31,7 +31,7 @@
     "@babel/runtime": "^7.8.4",
     "@code-quality/commitlint-config": "^1.1.0",
     "@code-quality/eslint-config-jest": "^1.1.0",
-    "@code-quality/eslint-config-react-native": "^1.2.2",
+    "@code-quality/eslint-config-react-native": "^1.3.0",
     "@code-quality/eslint-config-typescript": "^1.6.0",
     "@code-quality/prettier-config": "^2.1.0",
     "@code-quality/stylelint-styled-components-react-native-config": "^1.1.0",
