@@ -45,7 +45,7 @@
     "@types/react-native": "^0.61.12",
     "@types/react-test-renderer": "^16.9.2",
     "@types/styled-components": "^5.0.1",
-    "@types/yup": "^0.26.34",
+    "@types/yup": "^0.26.35",
     "babel-jest": "^25.3.0",
     "babel-plugin-inline-import": "^3.0.0",
     "babel-plugin-module-resolver": "^4.0.0",
