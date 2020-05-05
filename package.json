@@ -20,7 +20,7 @@
     "native-base": "^2.13.12",
     "react": "16.9.0",
     "react-native": "0.61.5",
-    "react-native-config": "^0.12.0",
+    "react-native-config": "^1.0.0",
     "react-native-navigation": "4.4.0",
     "styled-components": "^5.1.0",
     "styled-is": "^1.3.0",
