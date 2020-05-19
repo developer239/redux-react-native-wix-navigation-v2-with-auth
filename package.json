@@ -59,7 +59,7 @@
     "metro-react-native-babel-preset": "^0.59.0",
     "prettier": "^2.0.5",
     "react-test-renderer": "^16.13.0",
-    "stylelint": "^13.3.3",
+    "stylelint": "^13.4.1",
     "stylelint-config-prettier": "^8.0.1",
     "typescript": "^3.8.3"
   },
