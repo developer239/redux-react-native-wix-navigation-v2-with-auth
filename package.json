@@ -27,7 +27,7 @@
     "yup": "^0.29.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.4",
+    "@babel/core": "^7.10.5",
     "@babel/runtime": "^7.10.4",
     "@code-quality/commitlint-config": "^1.1.0",
     "@code-quality/eslint-config-jest": "^1.1.0",
