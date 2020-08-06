@@ -35,7 +35,7 @@
     "@code-quality/eslint-config-typescript": "^1.10.0",
     "@code-quality/prettier-config": "^2.1.0",
     "@code-quality/stylelint-styled-components-react-native-config": "^1.3.0",
-    "@commitlint/cli": "^8.3.5",
+    "@commitlint/cli": "^9.1.1",
     "@react-native-community/eslint-config": "^2.0.0",
     "@testing-library/react-native": "^7.0.1",
     "@types/detox": "^16.4.1",
