@@ -37,7 +37,7 @@
     "@code-quality/stylelint-styled-components-react-native-config": "^1.3.0",
     "@commitlint/cli": "^8.3.5",
     "@react-native-community/eslint-config": "^2.0.0",
-    "@testing-library/react-native": "^5.0.3",
+    "@testing-library/react-native": "^7.0.1",
     "@types/detox": "^16.4.1",
     "@types/jest": "^26.0.9",
     "@types/node": "^14.0.27",
