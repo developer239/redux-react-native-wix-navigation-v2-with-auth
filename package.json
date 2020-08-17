@@ -61,7 +61,7 @@
     "react-test-renderer": "^16.13.0",
     "stylelint": "^13.6.1",
     "stylelint-config-prettier": "^8.0.1",
-    "typescript": "^3.9.6"
+    "typescript": "^3.9.7"
   },
   "jest": {
     "preset": "react-native"
