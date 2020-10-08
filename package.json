@@ -15,7 +15,7 @@
     "detox:test:android": "detox test -c android.emu.debug"
   },
   "dependencies": {
-    "@react-native-community/async-storage": "^1.11.0",
+    "@react-native-community/async-storage": "^1.12.1",
     "formik": "^2.1.6",
     "native-base": "^2.13.14",
     "react": "16.9.0",
