@@ -46,7 +46,7 @@
     "@types/react-test-renderer": "^16.9.3",
     "@types/styled-components": "^5.1.4",
     "@types/yup": "^0.29.8",
-    "babel-jest": "^26.6.0",
+    "babel-jest": "^26.6.3",
     "babel-plugin-inline-import": "^3.0.0",
     "babel-plugin-module-resolver": "^4.0.0",
     "detox": "15.1.4",
